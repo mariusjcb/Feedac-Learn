@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "Feedac-CoreRedux",
+        "repositoryURL": "https://github.com/mariusjcb/Feedac-CoreRedux.git",
+        "state": {
+          "branch": null,
+          "revision": "472616426e809da7774ea3db1c970a7113ab73bb",
+          "version": "1.0.1"
+        }
+      },
+      {
+        "package": "Feedac-UIRedux",
+        "repositoryURL": "https://github.com/mariusjcb/Feedac-UIRedux.git",
+        "state": {
+          "branch": "master",
+          "revision": "15d7447781afdf2425b4b7b6849666a2be56a46f",
+          "version": null
+        }
+      }
+    ]
+  },
+  "version": 1
+}
