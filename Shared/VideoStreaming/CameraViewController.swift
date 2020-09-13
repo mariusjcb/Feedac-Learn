@@ -862,7 +862,6 @@ class CameraViewController: UIViewController,
     private var assetWriter: AVAssetWriter! = nil
     private var assetWriterInput: AVAssetWriterInput! = nil
     private var audioWriterInput: AVAssetWriterInput! = nil
-    private var chunkNumber = 0
     private let chunkMaxDuration = 8.0
     private var chunkStartTime: CMTime! = nil
     private var chunkOutputURL: URL! = nil
@@ -1029,7 +1028,7 @@ class CameraViewController: UIViewController,
                                  options: [.skipsHiddenFiles, .skipsSubdirectoryDescendants])
         
         let tsFiles = (directoryContents ?? [])
-            .filter { $0.pathExtension == "ts" }
+            .filter { $0.pathExtension == "m4s" || $0.pathExtension == "mp4" || $0.pathExtension == "m3u8" }
             .map { ($0, (try? $0.resourceValues(forKeys: [.creationDateKey]))?.creationDate ?? Date.distantPast) }
             .sorted(by: { $0.1 < $1.1 })
         
@@ -1112,10 +1111,9 @@ class CameraViewController: UIViewController,
         assetWriterInput.expectsMediaDataInRealTime = true
         assetWriter.add(assetWriterInput)
         
-        chunkNumber += 1
         assetWriter.shouldOptimizeForNetworkUse = true
         assetWriter.outputFileTypeProfile = configuration.outputFileTypeProfile
-        assetWriter.preferredOutputSegmentInterval = CMTime(seconds: Double(configuration.segmentDuration), preferredTimescale: 1)
+        assetWriter.preferredOutputSegmentInterval = CMTime(value: CMTimeValue(configuration.partialSegment), timescale: 1000)
         assetWriter.initialSegmentStartTime = configuration.startTimeOffset
         
         assetWriter.startWriting()
@@ -1142,13 +1140,11 @@ class CameraViewController: UIViewController,
             return
         }
         
-        let segment = Segment(index: Segment.lastIndexFound,
-                data: segmentData,
-                isInitializationSegment: isInitializationSegment,
-                report: segmentReport)
-        segment.write()
-        let name = segment.fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix)
-        Segment.lastIndexFound += 1
+        let segment = Segment(index: Segment.lastPartialIndexFound,
+                              data: segmentData,
+                              isInitializationSegment: isInitializationSegment,
+                              report: segmentReport)
+        segment.write(queue: mergeQueue)
     }
     
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
@@ -1170,30 +1166,38 @@ class CameraViewController: UIViewController,
 
 struct Segment {
     static var previousReport: (String, AVAssetSegmentTrackReport)?
+    static var partialSumCheck: CMTime = CMTime(value: 0, timescale: 1000)
     static var m3u8 = M3U()
     static var lastIndexFound = 0
+    static var lastPartialIndexFound = 0
     static var sequence: Int = 0
     static var files: [M3UMediaInfo] = []
+    static var partials: [Int: [M3UMediaInfo]] = [:]
     
     let index: Int
     let data: Data
     let isInitializationSegment: Bool
     let report: AVAssetSegmentReport?
     
-    func fileName(forPrefix prefix: String) -> String {
+    func fileName(forPrefix prefix: String, isPartial: Bool = false) -> String {
         let fileExtension: String
         if isInitializationSegment {
             fileExtension = "mp4"
         } else {
             fileExtension = "m4s"
         }
-        return "\(prefix)\(index).\(fileExtension)"
+        if isPartial {
+            return "\(prefix)\(Self.lastIndexFound).\(index).\(fileExtension)"
+        } else {
+            return "\(prefix)\(Self.lastIndexFound).\(fileExtension)"
+        }
     }
     
-    func write() {
+    func write(queue: DispatchQueue) {
         let fileManager = FileManager.default
         
-        let chunkName = fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix)
+        let chunkName = fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix,
+                                 isPartial: isInitializationSegment == false)
         let chunkUrl = URL(fileURLWithPath: NSTemporaryDirectory())
             .appendingPathComponent(chunkName)
         let playlistUrl = URL(fileURLWithPath: NSTemporaryDirectory())
@@ -1204,27 +1208,72 @@ struct Segment {
             .appendingPathExtension("m3u8")
         try? fileManager.removeItem(at: chunkUrl)
         try? data.write(to: chunkUrl)
-        try? resolveM3U8File().write(to: playlistUrl, atomically: false, encoding: .utf8)
-        try? resolveM3U8File(llhls: true).write(to: playlistLLHLSUrl, atomically: false, encoding: .utf8)
+        try? resolveM3U8File(queue: queue).write(to: playlistUrl, atomically: false, encoding: .utf8)
+        try? resolveM3U8File(llhls: true, queue: queue).write(to: playlistLLHLSUrl, atomically: false, encoding: .utf8)
     }
     
-    func resolveM3U8File(llhls: Bool = false) -> String {
-        let fileName = self.fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix)
+    func resolveM3U8File(llhls: Bool = false, queue: DispatchQueue) -> String {
+        let fileName = self.fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix,
+                                     isPartial: isInitializationSegment == false)
         if !isInitializationSegment {
+            if Self.partials[Self.lastIndexFound] == nil {
+                Self.partials[Self.lastIndexFound] = []
+            }
             let segmentReport = report!
             let timingTrackReport = segmentReport.trackReports.first(where: { $0.mediaType == .video })!
             if let previousSegmentInfo = Self.previousReport {
-                let segmentDuration = timingTrackReport.earliestPresentationTimeStamp - previousSegmentInfo.1.earliestPresentationTimeStamp
-                Self.files.append(.init(url: previousSegmentInfo.0, duration: segmentDuration))
+                let segmentDuration = CMTimeSubtract(timingTrackReport.earliestPresentationTimeStamp,
+                                                     previousSegmentInfo.1.earliestPresentationTimeStamp)
+                Self.partialSumCheck = CMTimeAdd(Self.partialSumCheck, segmentDuration)
+                if Double(Self.partialSumCheck.value) / 1000 > FMP4WriterConfiguration().segmentDuration * 0.5 {
+                    let fileName = self.fileName(forPrefix: FMP4WriterConfiguration().segmentFileNamePrefix, isPartial: false)
+                    Self.saveM4SChunck(Self.lastIndexFound, fileName, queue)
+                    Self.lastIndexFound += 1
+                    Self.lastPartialIndexFound = 0
+                    if Self.partials[Self.lastIndexFound] == nil {
+                        Self.partials[Self.lastIndexFound] = []
+                    }
+                    Self.files.append(.init(url: fileName, duration: Self.partialSumCheck, isPartial: false))
+                    Self.partialSumCheck = CMTime(value: 0, timescale: 1000)
+                }
+                if segmentDuration.value > 0 {
+                    Self.partials[Self.lastIndexFound]!.append(.init(url: previousSegmentInfo.0,
+                                                                     duration: segmentDuration,
+                                                                     isPartial: true))
+                    Self.lastPartialIndexFound += 1
+                } else {
+                    Self.partialSumCheck = CMTimeSubtract(Self.partialSumCheck, segmentDuration)
+                }
             }
-            Self.previousReport = (fileName, timingTrackReport)
-        } else {
+            if timingTrackReport.earliestPresentationTimeStamp.value > 0 {
+                Self.previousReport = (fileName, timingTrackReport)
+            }
+        } else if isInitializationSegment {
             Self.m3u8.firstElement = fileName
+            Self.lastPartialIndexFound += 1
         }
         
-        Self.m3u8.targetDuration = Double(FMP4WriterConfiguration().segmentDuration)
         Self.m3u8.mediaList = Self.files
+        Self.m3u8.partialList = Self.partials
         return llhls ? Self.m3u8.descriptionLLHLS : Self.m3u8.description
+    }
+    
+    private static func saveM4SChunck(_ index: Int, _ name: String, _ queue: DispatchQueue) {
+        guard partials.count > index else { return }
+        queue.async {
+            let filePath = URL(fileURLWithPath: NSTemporaryDirectory())
+                .appendingPathComponent(name)
+            guard partials.count > index else { return }
+            let elements = (partials[index] ?? []).map {
+                URL(fileURLWithPath: NSTemporaryDirectory())
+                    .appendingPathComponent($0.url)
+            }
+            do {
+                try FileManager().merge(files: elements, to: filePath)
+            } catch {
+                print(error)
+            }
+        }
     }
 }
 
@@ -1268,9 +1317,10 @@ struct FMP4WriterConfiguration {
     let outputContentType = AVFileType.mp4
     let outputFileTypeProfile = AVFileTypeProfile.mpeg4AppleHLS
     let segmentDuration = 1.0
+    var partialSegment: Double = 320
     var segmentFileNamePrefix = "fileSequence"
     
-    let startTimeOffset = CMTime(value: 0, timescale: 1)
+    let startTimeOffset = CMTime(value: 3000, timescale: 1000)
     
     let audioCompressionSettings: [String: Any] = [
         AVFormatIDKey: kAudioFormatMPEG4AAC,
@@ -1298,30 +1348,36 @@ struct M3U {
     var firstElement: String?
     var version: Int = M3U.defaultVersion
     var mediaList: [M3UMediaInfo] = []
-    var targetDuration: Double = 5
+    var partialList: [Int: [M3UMediaInfo]] = [:]
+    var partialDuration: Double {
+        min(partialList.values.map { $0.map { $0.duration }.max() }.compactMap { $0?.seconds }.max() ?? 0,
+            FMP4WriterConfiguration().partialSegment)
+    }
+    var targetDuration: Double {
+        max(FMP4WriterConfiguration().segmentDuration * 0.5, 1)
+    }
 }
 
 extension M3U: CustomStringConvertible {
-    var description: String {
-        var lines: [String] = [
+    private var commonLines: [String] {
+        var lines = [
             "#EXTM3U",
             "#EXT-X-VERSION: \(version)",
             "#EXT-X-MEDIA-SEQUENCE: 0",
             "#EXT-X-TARGETDURATION: \(Int(targetDuration))",
-//            "#EXT-X-SERVER-CONTROL:CAN-BLOCK-RELOAD=NO,PART-HOLD-BACK=1.0,CAN-SKIP-UNTIL=1.0",
-            "#EXT-X-PART-INF:PART-TARGET= \(Int(targetDuration))",
-            "#EXT-X-MEDIA-SEQUENCE: 0"
         ]
         if let firstElement = self.firstElement {
             lines.append("#EXT-X-MAP:URI=\"\(firstElement)\"")
         }
+        return lines
+    }
+    
+    var description: String {
+        var lines = commonLines
         for info in mediaList {
-            lines.append("#EXTINF: \(String(format: "%1.5f", info.duration.seconds)),")
+            lines.append("#EXTINF: \(String(format: "%1.5f", CMTimeGetSeconds(info.duration))),")
             lines.append(info.url)
         }
-//        for info in mediaList {
-//            lines.append("#EXT-X-PART:DURATION=\(String(format: "%1.5f", info.duration.seconds)),URI=\"\(info.url)\",INDEPENDENT=YES")
-//        }
         let test = lines.joined(separator: "\n")
         print(test)
         return test
@@ -1329,23 +1385,17 @@ extension M3U: CustomStringConvertible {
     
     var descriptionLLHLS: String {
         var lines: [String] = [
-            "#EXTM3U",
-            "#EXT-X-VERSION: \(version)",
-            "#EXT-X-INDEPENDENT-SEGMENTS",
-            "#EXT-X-TARGETDURATION: \(Int(targetDuration))",
-            "#EXT-X-SERVER-CONTROL:CAN-BLOCK-RELOAD=NO,PART-HOLD-BACK=1.0,CAN-SKIP-UNTIL=1.0",
-            "#EXT-X-PART-INF:PART-TARGET= \(Int(targetDuration))",
-            "#EXT-X-MEDIA-SEQUENCE: 0",
-            "#EXT-X-PROGRAM-DATE-TIME:2019-12-23T02:29:02.609Z"
+            "#EXT-X-SERVER-CONTROL:PART-HOLD-BACK=\(Int(targetDuration) * 3)",
+            "#EXT-X-PART-INF:PART-TARGET= \(Int(partialDuration))",
         ]
-        if let firstElement = self.firstElement {
-            lines.append("#EXT-X-MAP:URI=\"\(firstElement)\"")
-        }
-        for info in mediaList {
-            lines.append("#EXT-X-PART:DURATION=\(String(format: "%1.5f", info.duration.seconds)),URI=\"\(info.url)\",INDEPENDENT=YES")
-        }
-        if let firstElement = self.firstElement {
-            lines.append("\(firstElement)")
+        for partialKey in partialList.keys.sorted() {
+            for partial in partialList[partialKey]! {
+                lines.append("#EXT-X-PART:DURATION=\(String(format: "%1.5f", CMTimeGetSeconds(partial.duration))),URI=\"\(partial.url)\",INDEPENDENT=YES")
+            }
+            guard mediaList.count > partialKey else { continue }
+            let info = mediaList[partialKey]
+            lines.append("#EXTINF:\(String(format: "%1.5f", CMTimeGetSeconds(info.duration))),")
+            lines.append(info.url)
         }
         let test = lines.joined(separator: "\n")
         print(test)
@@ -1356,4 +1406,22 @@ extension M3U: CustomStringConvertible {
 struct M3UMediaInfo {
     let url: String
     let duration: CMTime
+    let isPartial: Bool
+}
+
+extension FileManager {
+    func merge(files: [URL], to destination: URL, chunkSize: Int = 1000000) throws {
+        FileManager.default.createFile(atPath: destination.path, contents: nil, attributes: nil)
+        let writer = try FileHandle(forWritingTo: destination)
+        try files.forEach({ partLocation in
+            let reader = try FileHandle(forReadingFrom: partLocation)
+            var data = reader.readData(ofLength: chunkSize)
+            while data.count > 0 {
+                writer.write(data)
+                data = reader.readData(ofLength: chunkSize)
+            }
+            reader.closeFile()
+        })
+        writer.closeFile()
+    }
 }

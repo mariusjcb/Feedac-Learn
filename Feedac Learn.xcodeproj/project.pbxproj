@@ -112,11 +112,11 @@
 		7A931E212503C3D100F5BB16 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E202503C3D100F5BB16 /* Lesson.swift */; };
 		7A931E232503C99D00F5BB16 /* LessonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E222503C99D00F5BB16 /* LessonsState.swift */; };
 		7A931E292503CF6900F5BB16 /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
-		7ABC2023250D847D00039D38 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABC2022250D847D00039D38 /* Swifter */; };
 		7AC08C76250A4985000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C75250A4985000100EE /* CodeView.swift */; };
 		7AC08C82250A4C21000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
 		7AC08C83250A4C96000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
 		7AC08C84250A4C97000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
+		7AD381FF250E374C003282DC /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD381FE250E374C003282DC /* Swifter */; };
 		7AD53F21250545A700552EB6 /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
 		7AD53F22250545A800552EB6 /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
 		7AD53F23250553BD00552EB6 /* TextFieldObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B81012504F9A0001EC23C /* TextFieldObservable.swift */; };
@@ -279,7 +279,7 @@
 				7A349AB12504BC15002ACA61 /* SDWebImageSwiftUI in Frameworks */,
 				7A8D1F2E250C09D20026B2C3 /* RoundCode in Frameworks */,
 				7A931DF5250390B300F5BB16 /* Feedac-UIRedux in Frameworks */,
-				7ABC2023250D847D00039D38 /* Swifter in Frameworks */,
+				7AD381FF250E374C003282DC /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,7 +614,7 @@
 				7A931DF4250390B300F5BB16 /* Feedac-UIRedux */,
 				7A349AB02504BC15002ACA61 /* SDWebImageSwiftUI */,
 				7A8D1F2D250C09D20026B2C3 /* RoundCode */,
-				7ABC2022250D847D00039D38 /* Swifter */,
+				7AD381FE250E374C003282DC /* Swifter */,
 			);
 			productName = "Feedac Learn (iOS)";
 			productReference = 7A3AE2A9250233E100FBFEA7 /* Feedac Learn.app */;
@@ -805,7 +805,7 @@
 				7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */,
 				7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
 				7A8D1F2C250C09D20026B2C3 /* XCRemoteSwiftPackageReference "RoundCode" */,
-				7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */,
+				7AD381FD250E374B003282DC /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 7A3AE2AA250233E100FBFEA7 /* Products */;
 			projectDirPath = "";
@@ -1697,9 +1697,9 @@
 				kind = branch;
 			};
 		};
-		7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */ = {
+		7AD381FD250E374B003282DC /* XCRemoteSwiftPackageReference "swifter" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/httpswift/swifter.git";
+			repositoryURL = "https://github.com/mariusjcb/swifter.git";
 			requirement = {
 				branch = "xcode12-swift5";
 				kind = branch;
@@ -1743,9 +1743,9 @@
 			package = 7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */;
 			productName = "Feedac-UIRedux";
 		};
-		7ABC2022250D847D00039D38 /* Swifter */ = {
+		7AD381FE250E374C003282DC /* Swifter */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */;
+			package = 7AD381FD250E374B003282DC /* XCRemoteSwiftPackageReference "swifter" */;
 			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
