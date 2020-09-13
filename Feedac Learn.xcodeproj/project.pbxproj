@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A1B81022504F9A0001EC23C /* TextFieldObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B81012504F9A0001EC23C /* TextFieldObservable.swift */; };
+		7A349A9E2504005D002ACA61 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */; };
+		7A349A9F2504005D002ACA61 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */; };
+		7A349AA42504181C002ACA61 /* ReadMoreHomePageBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA32504181C002ACA61 /* ReadMoreHomePageBanner.swift */; };
+		7A349AA52504181C002ACA61 /* ReadMoreHomePageBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA32504181C002ACA61 /* ReadMoreHomePageBanner.swift */; };
+		7A349AB12504BC15002ACA61 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7A349AB02504BC15002ACA61 /* SDWebImageSwiftUI */; };
+		7A349AB32504BC1C002ACA61 /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7A349AB22504BC1C002ACA61 /* SDWebImageSwiftUI */; };
 		7A3AE2BE250233E100FBFEA7 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AE2BD250233E100FBFEA7 /* Tests_iOS.swift */; };
 		7A3AE2C9250233E100FBFEA7 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AE2C8250233E100FBFEA7 /* Tests_macOS.swift */; };
 		7A3AE2CB250233E100FBFEA7 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A2250233DF00FBFEA7 /* AppCoordinator.swift */; };
@@ -15,17 +22,79 @@
 		7A3AE2CE250233E100FBFEA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A3250233DF00FBFEA7 /* ContentView.swift */; };
 		7A3AE2CF250233E100FBFEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */; };
 		7A3AE2D0250233E100FBFEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */; };
+		7A4322A82507B20B00B5A9CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4322A72507B20B00B5A9CD /* WidgetKit.framework */; };
+		7A4322AA2507B20B00B5A9CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4322A92507B20B00B5A9CD /* SwiftUI.framework */; };
+		7A4322AD2507B20B00B5A9CD /* Feedac_Learn_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4322AC2507B20B00B5A9CD /* Feedac_Learn_Widget.swift */; };
+		7A4322B02507B20D00B5A9CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A4322AF2507B20D00B5A9CD /* Assets.xcassets */; };
+		7A4322B22507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A4322AE2507B20B00B5A9CD /* Feedac_Learn_Widget.intentdefinition */; };
+		7A4322B32507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 7A4322AE2507B20B00B5A9CD /* Feedac_Learn_Widget.intentdefinition */; };
+		7A4322B62507B20D00B5A9CD /* Feedac Learn WidgetExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 7A4322A62507B20B00B5A9CD /* Feedac Learn WidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A4322BC2507B43E00B5A9CD /* RemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */; };
+		7A4322BD2507B44300B5A9CD /* RemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */; };
+		7A4322BE2507B47600B5A9CD /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E112503B6FA00F5BB16 /* LessonView.swift */; };
+		7A4322BF2507B47600B5A9CD /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E112503B6FA00F5BB16 /* LessonView.swift */; };
+		7A4322C02507B49800B5A9CD /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E202503C3D100F5BB16 /* Lesson.swift */; };
+		7A4322C12507B49800B5A9CD /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E202503C3D100F5BB16 /* Lesson.swift */; };
+		7A4322C22507B4A700B5A9CD /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E00250398D800F5BB16 /* AppLogger.swift */; };
+		7A4322C32507B4A700B5A9CD /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
+		7A4322C42507B4A700B5A9CD /* LessonsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79D0E92503D75100433C3E /* LessonsReducer.swift */; };
+		7A4322C52507B4A700B5A9CD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFA250395E200F5BB16 /* AppState.swift */; };
+		7A4322C62507B4A700B5A9CD /* LessonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E222503C99D00F5BB16 /* LessonsState.swift */; };
+		7A4322C72507B4A700B5A9CD /* AppStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFD2503986A00F5BB16 /* AppStateReducer.swift */; };
+		7A4322C82507B4A700B5A9CD /* AppLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E00250398D800F5BB16 /* AppLogger.swift */; };
+		7A4322C92507B4A700B5A9CD /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
+		7A4322CA2507B4A800B5A9CD /* LessonsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79D0E92503D75100433C3E /* LessonsReducer.swift */; };
+		7A4322CB2507B4A800B5A9CD /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFA250395E200F5BB16 /* AppState.swift */; };
+		7A4322CC2507B4A800B5A9CD /* LessonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E222503C99D00F5BB16 /* LessonsState.swift */; };
+		7A4322CD2507B4A800B5A9CD /* AppStateReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFD2503986A00F5BB16 /* AppStateReducer.swift */; };
+		7A4322CE2507B4AE00B5A9CD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4542505A8B2005602EB /* Review.swift */; };
+		7A4322CF2507B4AE00B5A9CD /* DiscoverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */; };
+		7A4322D02507B4AF00B5A9CD /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4542505A8B2005602EB /* Review.swift */; };
+		7A4322D12507B4AF00B5A9CD /* DiscoverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */; };
+		7A4322D22507B4E800B5A9CD /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
+		7A4322D32507B4E900B5A9CD /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
+		7A4322D52507B53B00B5A9CD /* Feedac-UIRedux in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4322D42507B53B00B5A9CD /* Feedac-UIRedux */; };
+		7A4322D72507B54500B5A9CD /* Feedac-UIRedux in Frameworks */ = {isa = PBXBuildFile; productRef = 7A4322D62507B54500B5A9CD /* Feedac-UIRedux */; };
+		7A4322D82507B5F000B5A9CD /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
+		7A4322D92507B5F100B5A9CD /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
+		7A4322DA2507B60D00B5A9CD /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4572505AEA0005602EB /* DetailsView.swift */; };
+		7A4322DB2507B60E00B5A9CD /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4572505AEA0005602EB /* DetailsView.swift */; };
+		7A4322DC2507B62900B5A9CD /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4512505A7AB005602EB /* ReviewRow.swift */; };
+		7A4322DD2507B62900B5A9CD /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4512505A7AB005602EB /* ReviewRow.swift */; };
+		7A4322DE2507B63300B5A9CD /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */; };
+		7A4322DF2507B63300B5A9CD /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */; };
+		7A4322E02507B64300B5A9CD /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
+		7A4322E12507B64300B5A9CD /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
 		7A79D0DF2503D47C00433C3E /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
 		7A79D0E12503D48800433C3E /* LessonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E222503C99D00F5BB16 /* LessonsState.swift */; };
 		7A79D0E22503D48C00433C3E /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E202503C3D100F5BB16 /* Lesson.swift */; };
 		7A79D0E32503D48E00433C3E /* DiscoverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */; };
 		7A79D0E42503D49100433C3E /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E0D2503AE7D00F5BB16 /* HomeView.swift */; };
 		7A79D0E52503D49400433C3E /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E112503B6FA00F5BB16 /* LessonView.swift */; };
-		7A79D0E62503D49700433C3E /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E132503B85C00F5BB16 /* PosterImageView.swift */; };
-		7A79D0E72503D49900433C3E /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E162503B8E800F5BB16 /* ImageLoader.swift */; };
-		7A79D0E82503D49B00433C3E /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E182503B91300F5BB16 /* ImageService.swift */; };
 		7A79D0EA2503D75100433C3E /* LessonsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79D0E92503D75100433C3E /* LessonsReducer.swift */; };
 		7A79D0EB2503D75100433C3E /* LessonsReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A79D0E92503D75100433C3E /* LessonsReducer.swift */; };
+		7A84B44F2505A4AB005602EB /* RemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */; };
+		7A84B4502505A4AB005602EB /* RemoteImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */; };
+		7A84B4522505A7AB005602EB /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4512505A7AB005602EB /* ReviewRow.swift */; };
+		7A84B4532505A7AB005602EB /* ReviewRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4512505A7AB005602EB /* ReviewRow.swift */; };
+		7A84B4552505A8B2005602EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4542505A8B2005602EB /* Review.swift */; };
+		7A84B4562505A8B2005602EB /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4542505A8B2005602EB /* Review.swift */; };
+		7A84B4582505AEA0005602EB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4572505AEA0005602EB /* DetailsView.swift */; };
+		7A84B4592505AEA0005602EB /* DetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4572505AEA0005602EB /* DetailsView.swift */; };
+		7A84B4672505D4EF005602EB /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
+		7A84B4682505D4EF005602EB /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
+		7A84B4702505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */; };
+		7A84B4722505E7C8005602EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4712505E7C8005602EB /* ContentView.swift */; };
+		7A84B4772505E7CB005602EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B4762505E7CB005602EB /* Preview Assets.xcassets */; };
+		7A84B4832505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4822505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift */; };
+		7A84B48E2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B48D2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift */; };
+		7A84B4922505E7CB005602EB /* Feedac Learn App Clips.app in Embed App Clips */ = {isa = PBXBuildFile; fileRef = 7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */; platformFilter = ios; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		7A84B49D2505E8F5005602EB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */; };
+		7A84B4A02505F249005602EB /* appclip.html in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B49F2505F249005602EB /* appclip.html */; };
+		7A84B4A12505F249005602EB /* appclip.html in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B49F2505F249005602EB /* appclip.html */; };
+		7A84B4A32505FB0B005602EB /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B4A22505FB0B005602EB /* Launch.storyboard */; };
+		7A84B4A42505FB0B005602EB /* Launch.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B4A22505FB0B005602EB /* Launch.storyboard */; };
+		7A8D1F2E250C09D20026B2C3 /* RoundCode in Frameworks */ = {isa = PBXBuildFile; productRef = 7A8D1F2D250C09D20026B2C3 /* RoundCode */; };
 		7A931DF5250390B300F5BB16 /* Feedac-UIRedux in Frameworks */ = {isa = PBXBuildFile; productRef = 7A931DF4250390B300F5BB16 /* Feedac-UIRedux */; };
 		7A931DF8250390C900F5BB16 /* Feedac-UIRedux in Frameworks */ = {isa = PBXBuildFile; productRef = 7A931DF7250390C900F5BB16 /* Feedac-UIRedux */; };
 		7A931DFB250395E200F5BB16 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFA250395E200F5BB16 /* AppState.swift */; };
@@ -39,13 +108,27 @@
 		7A931E0B25039B1D00F5BB16 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931DFA250395E200F5BB16 /* AppState.swift */; };
 		7A931E0E2503AE7D00F5BB16 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E0D2503AE7D00F5BB16 /* HomeView.swift */; };
 		7A931E122503B6FA00F5BB16 /* LessonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E112503B6FA00F5BB16 /* LessonView.swift */; };
-		7A931E142503B85C00F5BB16 /* PosterImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E132503B85C00F5BB16 /* PosterImageView.swift */; };
-		7A931E172503B8E800F5BB16 /* ImageLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E162503B8E800F5BB16 /* ImageLoader.swift */; };
-		7A931E192503B91300F5BB16 /* ImageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E182503B91300F5BB16 /* ImageService.swift */; };
 		7A931E1F2503C35C00F5BB16 /* DiscoverList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */; };
 		7A931E212503C3D100F5BB16 /* Lesson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E202503C3D100F5BB16 /* Lesson.swift */; };
 		7A931E232503C99D00F5BB16 /* LessonsState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E222503C99D00F5BB16 /* LessonsState.swift */; };
 		7A931E292503CF6900F5BB16 /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
+		7ABC2023250D847D00039D38 /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7ABC2022250D847D00039D38 /* Swifter */; };
+		7AC08C76250A4985000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C75250A4985000100EE /* CodeView.swift */; };
+		7AC08C82250A4C21000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
+		7AC08C83250A4C96000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
+		7AC08C84250A4C97000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
+		7AD53F21250545A700552EB6 /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
+		7AD53F22250545A800552EB6 /* LessonDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */; };
+		7AD53F23250553BD00552EB6 /* TextFieldObservable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A1B81012504F9A0001EC23C /* TextFieldObservable.swift */; };
+		7AD9F93F250C8E3400BCFCDF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F93C250C8E1400BCFCDF /* CameraViewController.swift */; };
+		7ADE5207250BADD7007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5206250BADD7007E0E63 /* ScannerView.swift */; };
+		7ADE520A250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
+		7ADE520B250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
+		7ADE520C250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
+		7AF339EE2503F7D7007B4B29 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
+		7AF339EF2503F7D7007B4B29 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
+		7AF339F12503FB0B007B4B29 /* LessonsViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339F02503FB0B007B4B29 /* LessonsViewList.swift */; };
+		7AF339F22503FB0B007B4B29 /* LessonsViewList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339F02503FB0B007B4B29 /* LessonsViewList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,9 +146,66 @@
 			remoteGlobalIDString = 7A3AE2B0250233E100FBFEA7;
 			remoteInfo = "Feedac Learn (macOS)";
 		};
+		7A4322B42507B20D00B5A9CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3AE29D250233DE00FBFEA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A4322A52507B20B00B5A9CD;
+			remoteInfo = "Feedac Learn WidgetExtension";
+		};
+		7A84B47F2505E7CB005602EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3AE29D250233DE00FBFEA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A84B46C2505E7C8005602EB;
+			remoteInfo = "Feedac Learn App Clips";
+		};
+		7A84B48A2505E7CB005602EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3AE29D250233DE00FBFEA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A84B46C2505E7C8005602EB;
+			remoteInfo = "Feedac Learn App Clips";
+		};
+		7A84B4902505E7CB005602EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7A3AE29D250233DE00FBFEA7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7A84B46C2505E7C8005602EB;
+			remoteInfo = "Feedac Learn App Clips";
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		7A4322B82507B20D00B5A9CD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				7A4322B62507B20D00B5A9CD /* Feedac Learn WidgetExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B4962505E7CB005602EB /* Embed App Clips */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/AppClips";
+			dstSubfolderSpec = 16;
+			files = (
+				7A84B4922505E7CB005602EB /* Feedac Learn App Clips.app in Embed App Clips */,
+			);
+			name = "Embed App Clips";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		7A1B81012504F9A0001EC23C /* TextFieldObservable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldObservable.swift; sourceTree = "<group>"; };
+		7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
+		7A349AA32504181C002ACA61 /* ReadMoreHomePageBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadMoreHomePageBanner.swift; sourceTree = "<group>"; };
+		7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonDetailsView.swift; sourceTree = "<group>"; };
 		7A3AE2A2250233DF00FBFEA7 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		7A3AE2A3250233DF00FBFEA7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,7 +221,36 @@
 		7A3AE2C8250233E100FBFEA7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7A3AE2CA250233E100FBFEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3AE2DF2502341D00FBFEA7 /* Feedac Learn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Feedac Learn.entitlements"; sourceTree = "<group>"; };
+		7A4322A62507B20B00B5A9CD /* Feedac Learn WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Feedac Learn WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A4322A72507B20B00B5A9CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		7A4322A92507B20B00B5A9CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7A4322AC2507B20B00B5A9CD /* Feedac_Learn_Widget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedac_Learn_Widget.swift; sourceTree = "<group>"; };
+		7A4322AE2507B20B00B5A9CD /* Feedac_Learn_Widget.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Feedac_Learn_Widget.intentdefinition; sourceTree = "<group>"; };
+		7A4322AF2507B20D00B5A9CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A4322B12507B20D00B5A9CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A4322B72507B20D00B5A9CD /* Feedac Learn WidgetExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Feedac Learn WidgetExtension.entitlements"; sourceTree = "<group>"; };
 		7A79D0E92503D75100433C3E /* LessonsReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsReducer.swift; sourceTree = "<group>"; };
+		7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageLoader.swift; sourceTree = "<group>"; };
+		7A84B4512505A7AB005602EB /* ReviewRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRow.swift; sourceTree = "<group>"; };
+		7A84B4542505A8B2005602EB /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		7A84B4572505AEA0005602EB /* DetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsView.swift; sourceTree = "<group>"; };
+		7A84B4662505D4EF005602EB /* ApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayView.swift; sourceTree = "<group>"; };
+		7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feedac Learn App Clips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedac_Learn_App_ClipsApp.swift; sourceTree = "<group>"; };
+		7A84B4712505E7C8005602EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7A84B4732505E7CB005602EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7A84B4762505E7CB005602EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		7A84B4782505E7CB005602EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A84B4792505E7CB005602EB /* Feedac_Learn_App_Clips.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Feedac_Learn_App_Clips.entitlements; sourceTree = "<group>"; };
+		7A84B47E2505E7CB005602EB /* Feedac Learn App ClipsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feedac Learn App ClipsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A84B4822505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedac_Learn_App_ClipsTests.swift; sourceTree = "<group>"; };
+		7A84B4842505E7CB005602EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A84B4892505E7CB005602EB /* Feedac Learn App ClipsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Feedac Learn App ClipsUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A84B48D2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedac_Learn_App_ClipsUITests.swift; sourceTree = "<group>"; };
+		7A84B48F2505E7CB005602EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A84B49E2505EF64005602EB /* apple-app-site-association */ = {isa = PBXFileReference; explicitFileType = text.json; path = "apple-app-site-association"; sourceTree = "<group>"; };
+		7A84B49F2505F249005602EB /* appclip.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = appclip.html; sourceTree = "<group>"; };
+		7A84B4A22505FB0B005602EB /* Launch.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Launch.storyboard; sourceTree = "<group>"; };
 		7A931DFA250395E200F5BB16 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		7A931DFD2503986A00F5BB16 /* AppStateReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStateReducer.swift; sourceTree = "<group>"; };
 		7A931E00250398D800F5BB16 /* AppLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppLogger.swift; sourceTree = "<group>"; };
@@ -89,13 +258,17 @@
 		7A931E0525039A9A00F5BB16 /* SplitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplitView.swift; sourceTree = "<group>"; };
 		7A931E0D2503AE7D00F5BB16 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		7A931E112503B6FA00F5BB16 /* LessonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonView.swift; sourceTree = "<group>"; };
-		7A931E132503B85C00F5BB16 /* PosterImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PosterImageView.swift; sourceTree = "<group>"; };
-		7A931E162503B8E800F5BB16 /* ImageLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageLoader.swift; sourceTree = "<group>"; };
-		7A931E182503B91300F5BB16 /* ImageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageService.swift; sourceTree = "<group>"; };
 		7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverList.swift; sourceTree = "<group>"; };
 		7A931E202503C3D100F5BB16 /* Lesson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Lesson.swift; sourceTree = "<group>"; };
 		7A931E222503C99D00F5BB16 /* LessonsState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsState.swift; sourceTree = "<group>"; };
 		7A931E282503CF6900F5BB16 /* LessonsAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsAction.swift; sourceTree = "<group>"; };
+		7AC08C75250A4985000100EE /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		7AC08C7D250A4C00000100EE /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		7AD9F93C250C8E1400BCFCDF /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		7ADE5206250BADD7007E0E63 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		7ADE5208250BAE7C007E0E63 /* ScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerView.swift; sourceTree = "<group>"; };
+		7AF339ED2503F7D7007B4B29 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		7AF339F02503FB0B007B4B29 /* LessonsViewList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonsViewList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +276,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A349AB12504BC15002ACA61 /* SDWebImageSwiftUI in Frameworks */,
+				7A8D1F2E250C09D20026B2C3 /* RoundCode in Frameworks */,
 				7A931DF5250390B300F5BB16 /* Feedac-UIRedux in Frameworks */,
+				7ABC2023250D847D00039D38 /* Swifter in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -111,6 +287,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A349AB32504BC1C002ACA61 /* SDWebImageSwiftUI in Frameworks */,
 				7A931DF8250390C900F5BB16 /* Feedac-UIRedux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -129,18 +306,70 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A4322A32507B20B00B5A9CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4322AA2507B20B00B5A9CD /* SwiftUI.framework in Frameworks */,
+				7A4322A82507B20B00B5A9CD /* WidgetKit.framework in Frameworks */,
+				7A4322D52507B53B00B5A9CD /* Feedac-UIRedux in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B46A2505E7C8005602EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4322D72507B54500B5A9CD /* Feedac-UIRedux in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B47B2505E7CB005602EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B4862505E7CB005602EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7A349AA62504B99D002ACA61 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				7AF339ED2503F7D7007B4B29 /* RatingView.swift */,
+				7A931E0D2503AE7D00F5BB16 /* HomeView.swift */,
+				7A349A9D2504005D002ACA61 /* HomeHeaderView.swift */,
+				7A931E112503B6FA00F5BB16 /* LessonView.swift */,
+				7AF339F02503FB0B007B4B29 /* LessonsViewList.swift */,
+				7A349AA32504181C002ACA61 /* ReadMoreHomePageBanner.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		7A3AE29C250233DE00FBFEA7 = {
 			isa = PBXGroup;
 			children = (
+				7A4322B72507B20D00B5A9CD /* Feedac Learn WidgetExtension.entitlements */,
+				7A84B49F2505F249005602EB /* appclip.html */,
+				7A84B49E2505EF64005602EB /* apple-app-site-association */,
 				7A3AE2DF2502341D00FBFEA7 /* Feedac Learn.entitlements */,
 				7A3AE2A1250233DF00FBFEA7 /* Shared */,
 				7A3AE2AB250233E100FBFEA7 /* iOS */,
 				7A3AE2B2250233E100FBFEA7 /* macOS */,
 				7A3AE2BC250233E100FBFEA7 /* Tests iOS */,
 				7A3AE2C7250233E100FBFEA7 /* Tests macOS */,
+				7A84B46E2505E7C8005602EB /* Feedac Learn App Clips */,
+				7A84B4812505E7CB005602EB /* Feedac Learn App ClipsTests */,
+				7A84B48C2505E7CB005602EB /* Feedac Learn App ClipsUITests */,
+				7A4322AB2507B20B00B5A9CD /* Feedac Learn Widget */,
 				7A3AE2AA250233E100FBFEA7 /* Products */,
 				7A931DF6250390C900F5BB16 /* Frameworks */,
 			);
@@ -149,6 +378,7 @@
 		7A3AE2A1250233DF00FBFEA7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7AD9F93B250C8DE700BCFCDF /* VideoStreaming */,
 				7A931E272503CEC400F5BB16 /* Redux */,
 				7A931E1D2503C35200F5BB16 /* Models */,
 				7A931E0C2503AE6A00F5BB16 /* Views */,
@@ -156,6 +386,7 @@
 				7A3AE2A2250233DF00FBFEA7 /* AppCoordinator.swift */,
 				7A3AE2A3250233DF00FBFEA7 /* ContentView.swift */,
 				7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */,
+				7A84B4A22505FB0B005602EB /* Launch.storyboard */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -167,6 +398,10 @@
 				7A3AE2B1250233E100FBFEA7 /* Feedac Learn.app */,
 				7A3AE2B9250233E100FBFEA7 /* Tests iOS.xctest */,
 				7A3AE2C4250233E100FBFEA7 /* Tests macOS.xctest */,
+				7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */,
+				7A84B47E2505E7CB005602EB /* Feedac Learn App ClipsTests.xctest */,
+				7A84B4892505E7CB005602EB /* Feedac Learn App ClipsUITests.xctest */,
+				7A4322A62507B20B00B5A9CD /* Feedac Learn WidgetExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -175,6 +410,8 @@
 			isa = PBXGroup;
 			children = (
 				7A3AE2AC250233E100FBFEA7 /* Info.plist */,
+				7AC08C75250A4985000100EE /* CodeView.swift */,
+				7ADE5206250BADD7007E0E63 /* ScannerView.swift */,
 			);
 			path = iOS;
 			sourceTree = "<group>";
@@ -184,6 +421,8 @@
 			children = (
 				7A3AE2B3250233E100FBFEA7 /* Info.plist */,
 				7A3AE2B4250233E100FBFEA7 /* macOS.entitlements */,
+				7AC08C7D250A4C00000100EE /* CodeView.swift */,
+				7ADE5208250BAE7C007E0E63 /* ScannerView.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -206,9 +445,61 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		7A4322AB2507B20B00B5A9CD /* Feedac Learn Widget */ = {
+			isa = PBXGroup;
+			children = (
+				7A4322AC2507B20B00B5A9CD /* Feedac_Learn_Widget.swift */,
+				7A4322AE2507B20B00B5A9CD /* Feedac_Learn_Widget.intentdefinition */,
+				7A4322AF2507B20D00B5A9CD /* Assets.xcassets */,
+				7A4322B12507B20D00B5A9CD /* Info.plist */,
+			);
+			path = "Feedac Learn Widget";
+			sourceTree = "<group>";
+		};
+		7A84B46E2505E7C8005602EB /* Feedac Learn App Clips */ = {
+			isa = PBXGroup;
+			children = (
+				7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */,
+				7A84B4712505E7C8005602EB /* ContentView.swift */,
+				7A84B4732505E7CB005602EB /* Assets.xcassets */,
+				7A84B4782505E7CB005602EB /* Info.plist */,
+				7A84B4792505E7CB005602EB /* Feedac_Learn_App_Clips.entitlements */,
+				7A84B4752505E7CB005602EB /* Preview Content */,
+			);
+			path = "Feedac Learn App Clips";
+			sourceTree = "<group>";
+		};
+		7A84B4752505E7CB005602EB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				7A84B4762505E7CB005602EB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		7A84B4812505E7CB005602EB /* Feedac Learn App ClipsTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A84B4822505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift */,
+				7A84B4842505E7CB005602EB /* Info.plist */,
+			);
+			path = "Feedac Learn App ClipsTests";
+			sourceTree = "<group>";
+		};
+		7A84B48C2505E7CB005602EB /* Feedac Learn App ClipsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				7A84B48D2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift */,
+				7A84B48F2505E7CB005602EB /* Info.plist */,
+			);
+			path = "Feedac Learn App ClipsUITests";
+			sourceTree = "<group>";
+		};
 		7A931DF6250390C900F5BB16 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7A4322A72507B20B00B5A9CD /* WidgetKit.framework */,
+				7A4322A92507B20B00B5A9CD /* SwiftUI.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -242,9 +533,11 @@
 		7A931E0225039A7000F5BB16 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				7A931E152503B8D700F5BB16 /* ImageLoader */,
 				7A931E0325039A7A00F5BB16 /* TabBarView.swift */,
 				7A931E0525039A9A00F5BB16 /* SplitView.swift */,
+				7A1B81012504F9A0001EC23C /* TextFieldObservable.swift */,
+				7A84B44E2505A4AB005602EB /* RemoteImageLoader.swift */,
+				7A84B4572505AEA0005602EB /* DetailsView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -252,25 +545,18 @@
 		7A931E0C2503AE6A00F5BB16 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				7A931E0D2503AE7D00F5BB16 /* HomeView.swift */,
-				7A931E112503B6FA00F5BB16 /* LessonView.swift */,
+				7A349AA62504B99D002ACA61 /* HomeView */,
+				7A349AA72504B9AD002ACA61 /* LessonDetailsView.swift */,
+				7A84B4512505A7AB005602EB /* ReviewRow.swift */,
+				7A84B4662505D4EF005602EB /* ApplePayView.swift */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		7A931E152503B8D700F5BB16 /* ImageLoader */ = {
-			isa = PBXGroup;
-			children = (
-				7A931E132503B85C00F5BB16 /* PosterImageView.swift */,
-				7A931E162503B8E800F5BB16 /* ImageLoader.swift */,
-				7A931E182503B91300F5BB16 /* ImageService.swift */,
-			);
-			path = ImageLoader;
 			sourceTree = "<group>";
 		};
 		7A931E1D2503C35200F5BB16 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7A84B4542505A8B2005602EB /* Review.swift */,
 				7A931E202503C3D100F5BB16 /* Lesson.swift */,
 				7A931E1E2503C35C00F5BB16 /* DiscoverList.swift */,
 			);
@@ -296,24 +582,39 @@
 			path = Redux;
 			sourceTree = "<group>";
 		};
+		7AD9F93B250C8DE700BCFCDF /* VideoStreaming */ = {
+			isa = PBXGroup;
+			children = (
+				7AD9F93C250C8E1400BCFCDF /* CameraViewController.swift */,
+			);
+			path = VideoStreaming;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		7A3AE2A8250233E100FBFEA7 /* Feedac Learn (iOS) */ = {
+		7A3AE2A8250233E100FBFEA7 /* Feedac Learn App (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 7A3AE2D3250233E100FBFEA7 /* Build configuration list for PBXNativeTarget "Feedac Learn (iOS)" */;
+			buildConfigurationList = 7A3AE2D3250233E100FBFEA7 /* Build configuration list for PBXNativeTarget "Feedac Learn App (iOS)" */;
 			buildPhases = (
 				7A3AE2A5250233E100FBFEA7 /* Sources */,
 				7A3AE2A6250233E100FBFEA7 /* Frameworks */,
 				7A3AE2A7250233E100FBFEA7 /* Resources */,
+				7A84B4962505E7CB005602EB /* Embed App Clips */,
+				7A4322B82507B20D00B5A9CD /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				7A84B4912505E7CB005602EB /* PBXTargetDependency */,
+				7A4322B52507B20D00B5A9CD /* PBXTargetDependency */,
 			);
-			name = "Feedac Learn (iOS)";
+			name = "Feedac Learn App (iOS)";
 			packageProductDependencies = (
 				7A931DF4250390B300F5BB16 /* Feedac-UIRedux */,
+				7A349AB02504BC15002ACA61 /* SDWebImageSwiftUI */,
+				7A8D1F2D250C09D20026B2C3 /* RoundCode */,
+				7ABC2022250D847D00039D38 /* Swifter */,
 			);
 			productName = "Feedac Learn (iOS)";
 			productReference = 7A3AE2A9250233E100FBFEA7 /* Feedac Learn.app */;
@@ -334,6 +635,7 @@
 			name = "Feedac Learn (macOS)";
 			packageProductDependencies = (
 				7A931DF7250390C900F5BB16 /* Feedac-UIRedux */,
+				7A349AB22504BC1C002ACA61 /* SDWebImageSwiftUI */,
 			);
 			productName = "Feedac Learn (macOS)";
 			productReference = 7A3AE2B1250233E100FBFEA7 /* Feedac Learn.app */;
@@ -375,6 +677,82 @@
 			productReference = 7A3AE2C4250233E100FBFEA7 /* Tests macOS.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		7A4322A52507B20B00B5A9CD /* Feedac Learn WidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A4322BB2507B20D00B5A9CD /* Build configuration list for PBXNativeTarget "Feedac Learn WidgetExtension" */;
+			buildPhases = (
+				7A4322A22507B20B00B5A9CD /* Sources */,
+				7A4322A32507B20B00B5A9CD /* Frameworks */,
+				7A4322A42507B20B00B5A9CD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feedac Learn WidgetExtension";
+			packageProductDependencies = (
+				7A4322D42507B53B00B5A9CD /* Feedac-UIRedux */,
+			);
+			productName = "Feedac Learn WidgetExtension";
+			productReference = 7A4322A62507B20B00B5A9CD /* Feedac Learn WidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		7A84B46C2505E7C8005602EB /* Feedac Learn App Clips */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A84B4932505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App Clips" */;
+			buildPhases = (
+				7A84B4692505E7C8005602EB /* Sources */,
+				7A84B46A2505E7C8005602EB /* Frameworks */,
+				7A84B46B2505E7C8005602EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Feedac Learn App Clips";
+			packageProductDependencies = (
+				7A4322D62507B54500B5A9CD /* Feedac-UIRedux */,
+			);
+			productName = "Feedac Learn App Clips";
+			productReference = 7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */;
+			productType = "com.apple.product-type.application.on-demand-install-capable";
+		};
+		7A84B47D2505E7CB005602EB /* Feedac Learn App ClipsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A84B4972505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App ClipsTests" */;
+			buildPhases = (
+				7A84B47A2505E7CB005602EB /* Sources */,
+				7A84B47B2505E7CB005602EB /* Frameworks */,
+				7A84B47C2505E7CB005602EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A84B4802505E7CB005602EB /* PBXTargetDependency */,
+			);
+			name = "Feedac Learn App ClipsTests";
+			productName = "Feedac Learn App ClipsTests";
+			productReference = 7A84B47E2505E7CB005602EB /* Feedac Learn App ClipsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7A84B4882505E7CB005602EB /* Feedac Learn App ClipsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A84B49A2505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App ClipsUITests" */;
+			buildPhases = (
+				7A84B4852505E7CB005602EB /* Sources */,
+				7A84B4862505E7CB005602EB /* Frameworks */,
+				7A84B4872505E7CB005602EB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A84B48B2505E7CB005602EB /* PBXTargetDependency */,
+			);
+			name = "Feedac Learn App ClipsUITests";
+			productName = "Feedac Learn App ClipsUITests";
+			productReference = 7A84B4892505E7CB005602EB /* Feedac Learn App ClipsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -398,6 +776,20 @@
 						CreatedOnToolsVersion = 12.0;
 						TestTargetID = 7A3AE2B0250233E100FBFEA7;
 					};
+					7A4322A52507B20B00B5A9CD = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					7A84B46C2505E7C8005602EB = {
+						CreatedOnToolsVersion = 12.0;
+					};
+					7A84B47D2505E7CB005602EB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 7A84B46C2505E7C8005602EB;
+					};
+					7A84B4882505E7CB005602EB = {
+						CreatedOnToolsVersion = 12.0;
+						TestTargetID = 7A84B46C2505E7C8005602EB;
+					};
 				};
 			};
 			buildConfigurationList = 7A3AE2A0250233DE00FBFEA7 /* Build configuration list for PBXProject "Feedac Learn" */;
@@ -411,15 +803,22 @@
 			mainGroup = 7A3AE29C250233DE00FBFEA7;
 			packageReferences = (
 				7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */,
+				7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */,
+				7A8D1F2C250C09D20026B2C3 /* XCRemoteSwiftPackageReference "RoundCode" */,
+				7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */,
 			);
 			productRefGroup = 7A3AE2AA250233E100FBFEA7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A3AE2A8250233E100FBFEA7 /* Feedac Learn (iOS) */,
+				7A3AE2A8250233E100FBFEA7 /* Feedac Learn App (iOS) */,
 				7A3AE2B0250233E100FBFEA7 /* Feedac Learn (macOS) */,
+				7A84B46C2505E7C8005602EB /* Feedac Learn App Clips */,
+				7A4322A52507B20B00B5A9CD /* Feedac Learn WidgetExtension */,
 				7A3AE2B8250233E100FBFEA7 /* Tests iOS */,
 				7A3AE2C3250233E100FBFEA7 /* Tests macOS */,
+				7A84B47D2505E7CB005602EB /* Feedac Learn App ClipsTests */,
+				7A84B4882505E7CB005602EB /* Feedac Learn App ClipsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -429,7 +828,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A84B4A02505F249005602EB /* appclip.html in Resources */,
 				7A3AE2CF250233E100FBFEA7 /* Assets.xcassets in Resources */,
+				7A84B4A32505FB0B005602EB /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,7 +838,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A84B4A12505F249005602EB /* appclip.html in Resources */,
 				7A3AE2D0250233E100FBFEA7 /* Assets.xcassets in Resources */,
+				7A84B4A42505FB0B005602EB /* Launch.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +852,37 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		7A3AE2C2250233E100FBFEA7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A4322A42507B20B00B5A9CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4322B02507B20D00B5A9CD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B46B2505E7C8005602EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A84B4772505E7CB005602EB /* Preview Assets.xcassets in Resources */,
+				7A84B49D2505E8F5005602EB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B47C2505E7CB005602EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B4872505E7CB005602EB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,17 +901,29 @@
 				7A931DFE2503986A00F5BB16 /* AppStateReducer.swift in Sources */,
 				7A931E1F2503C35C00F5BB16 /* DiscoverList.swift in Sources */,
 				7A931E0E2503AE7D00F5BB16 /* HomeView.swift in Sources */,
-				7A931E172503B8E800F5BB16 /* ImageLoader.swift in Sources */,
 				7A931E122503B6FA00F5BB16 /* LessonView.swift in Sources */,
 				7A931E292503CF6900F5BB16 /* LessonsAction.swift in Sources */,
+				7A349A9E2504005D002ACA61 /* HomeHeaderView.swift in Sources */,
 				7A931DFB250395E200F5BB16 /* AppState.swift in Sources */,
-				7A931E142503B85C00F5BB16 /* PosterImageView.swift in Sources */,
+				7ADE5207250BADD7007E0E63 /* ScannerView.swift in Sources */,
+				7A4322B32507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */,
 				7A931E212503C3D100F5BB16 /* Lesson.swift in Sources */,
+				7AF339EE2503F7D7007B4B29 /* RatingView.swift in Sources */,
 				7A931E01250398D800F5BB16 /* AppLogger.swift in Sources */,
+				7A84B4522505A7AB005602EB /* ReviewRow.swift in Sources */,
+				7A84B44F2505A4AB005602EB /* RemoteImageLoader.swift in Sources */,
+				7AD53F21250545A700552EB6 /* LessonDetailsView.swift in Sources */,
+				7A1B81022504F9A0001EC23C /* TextFieldObservable.swift in Sources */,
+				7AC08C76250A4985000100EE /* CodeView.swift in Sources */,
+				7A84B4582505AEA0005602EB /* DetailsView.swift in Sources */,
+				7A349AA42504181C002ACA61 /* ReadMoreHomePageBanner.swift in Sources */,
+				7A84B4552505A8B2005602EB /* Review.swift in Sources */,
 				7A3AE2CD250233E100FBFEA7 /* ContentView.swift in Sources */,
-				7A931E192503B91300F5BB16 /* ImageService.swift in Sources */,
+				7A84B4672505D4EF005602EB /* ApplePayView.swift in Sources */,
 				7A931E0425039A7A00F5BB16 /* TabBarView.swift in Sources */,
+				7AF339F12503FB0B007B4B29 /* LessonsViewList.swift in Sources */,
 				7A3AE2CB250233E100FBFEA7 /* AppCoordinator.swift in Sources */,
+				7AD9F93F250C8E3400BCFCDF /* CameraViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -488,19 +934,29 @@
 				7A79D0E52503D49400433C3E /* LessonView.swift in Sources */,
 				7A3AE2CE250233E100FBFEA7 /* ContentView.swift in Sources */,
 				7A79D0EB2503D75100433C3E /* LessonsReducer.swift in Sources */,
+				7AF339EF2503F7D7007B4B29 /* RatingView.swift in Sources */,
 				7A79D0E42503D49100433C3E /* HomeView.swift in Sources */,
-				7A79D0E62503D49700433C3E /* PosterImageView.swift in Sources */,
+				7A84B4592505AEA0005602EB /* DetailsView.swift in Sources */,
 				7A931E0825039AAE00F5BB16 /* SplitView.swift in Sources */,
-				7A79D0E72503D49900433C3E /* ImageLoader.swift in Sources */,
+				7AF339F22503FB0B007B4B29 /* LessonsViewList.swift in Sources */,
+				7A84B4562505A8B2005602EB /* Review.swift in Sources */,
+				7ADE520A250BAEB0007E0E63 /* ScannerView.swift in Sources */,
 				7A79D0E12503D48800433C3E /* LessonsState.swift in Sources */,
 				7A79D0E32503D48E00433C3E /* DiscoverList.swift in Sources */,
+				7A84B4682505D4EF005602EB /* ApplePayView.swift in Sources */,
 				7A931E0B25039B1D00F5BB16 /* AppState.swift in Sources */,
+				7A84B4532505A7AB005602EB /* ReviewRow.swift in Sources */,
 				7A79D0DF2503D47C00433C3E /* LessonsAction.swift in Sources */,
 				7A931E0725039AAC00F5BB16 /* TabBarView.swift in Sources */,
+				7A84B4502505A4AB005602EB /* RemoteImageLoader.swift in Sources */,
+				7AD53F22250545A800552EB6 /* LessonDetailsView.swift in Sources */,
 				7A931E0A25039B1900F5BB16 /* AppLogger.swift in Sources */,
-				7A79D0E82503D49B00433C3E /* ImageService.swift in Sources */,
+				7AC08C82250A4C21000100EE /* CodeView.swift in Sources */,
+				7A349A9F2504005D002ACA61 /* HomeHeaderView.swift in Sources */,
+				7A349AA52504181C002ACA61 /* ReadMoreHomePageBanner.swift in Sources */,
 				7A931E0925039B1400F5BB16 /* AppStateReducer.swift in Sources */,
 				7A3AE2CC250233E100FBFEA7 /* AppCoordinator.swift in Sources */,
+				7AD53F23250553BD00552EB6 /* TextFieldObservable.swift in Sources */,
 				7A79D0E22503D48C00433C3E /* Lesson.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -521,18 +977,110 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7A4322A22507B20B00B5A9CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4322CA2507B4A800B5A9CD /* LessonsReducer.swift in Sources */,
+				7A4322D12507B4AF00B5A9CD /* DiscoverList.swift in Sources */,
+				7A4322CD2507B4A800B5A9CD /* AppStateReducer.swift in Sources */,
+				7AC08C84250A4C97000100EE /* CodeView.swift in Sources */,
+				7A4322C92507B4A700B5A9CD /* LessonsAction.swift in Sources */,
+				7A4322C12507B49800B5A9CD /* Lesson.swift in Sources */,
+				7A4322D92507B5F100B5A9CD /* LessonDetailsView.swift in Sources */,
+				7A4322E12507B64300B5A9CD /* ApplePayView.swift in Sources */,
+				7A4322CC2507B4A800B5A9CD /* LessonsState.swift in Sources */,
+				7A4322D02507B4AF00B5A9CD /* Review.swift in Sources */,
+				7A4322CB2507B4A800B5A9CD /* AppState.swift in Sources */,
+				7A4322BC2507B43E00B5A9CD /* RemoteImageLoader.swift in Sources */,
+				7ADE520C250BAEB0007E0E63 /* ScannerView.swift in Sources */,
+				7A4322AD2507B20B00B5A9CD /* Feedac_Learn_Widget.swift in Sources */,
+				7A4322C82507B4A700B5A9CD /* AppLogger.swift in Sources */,
+				7A4322DE2507B63300B5A9CD /* HomeHeaderView.swift in Sources */,
+				7A4322BF2507B47600B5A9CD /* LessonView.swift in Sources */,
+				7A4322DB2507B60E00B5A9CD /* DetailsView.swift in Sources */,
+				7A4322B22507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */,
+				7A4322DD2507B62900B5A9CD /* ReviewRow.swift in Sources */,
+				7A4322D32507B4E900B5A9CD /* RatingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B4692505E7C8005602EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A4322C42507B4A700B5A9CD /* LessonsReducer.swift in Sources */,
+				7A4322CF2507B4AE00B5A9CD /* DiscoverList.swift in Sources */,
+				7A4322C72507B4A700B5A9CD /* AppStateReducer.swift in Sources */,
+				7AC08C83250A4C96000100EE /* CodeView.swift in Sources */,
+				7A4322C32507B4A700B5A9CD /* LessonsAction.swift in Sources */,
+				7A4322C02507B49800B5A9CD /* Lesson.swift in Sources */,
+				7A4322D82507B5F000B5A9CD /* LessonDetailsView.swift in Sources */,
+				7A4322E02507B64300B5A9CD /* ApplePayView.swift in Sources */,
+				7A4322C62507B4A700B5A9CD /* LessonsState.swift in Sources */,
+				7A4322CE2507B4AE00B5A9CD /* Review.swift in Sources */,
+				7A4322C52507B4A700B5A9CD /* AppState.swift in Sources */,
+				7A4322BD2507B44300B5A9CD /* RemoteImageLoader.swift in Sources */,
+				7ADE520B250BAEB0007E0E63 /* ScannerView.swift in Sources */,
+				7A84B4722505E7C8005602EB /* ContentView.swift in Sources */,
+				7A4322C22507B4A700B5A9CD /* AppLogger.swift in Sources */,
+				7A4322DF2507B63300B5A9CD /* HomeHeaderView.swift in Sources */,
+				7A4322BE2507B47600B5A9CD /* LessonView.swift in Sources */,
+				7A4322DA2507B60D00B5A9CD /* DetailsView.swift in Sources */,
+				7A84B4702505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift in Sources */,
+				7A4322DC2507B62900B5A9CD /* ReviewRow.swift in Sources */,
+				7A4322D22507B4E800B5A9CD /* RatingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B47A2505E7CB005602EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A84B4832505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7A84B4852505E7CB005602EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A84B48E2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		7A3AE2BB250233E100FBFEA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 7A3AE2A8250233E100FBFEA7 /* Feedac Learn (iOS) */;
+			target = 7A3AE2A8250233E100FBFEA7 /* Feedac Learn App (iOS) */;
 			targetProxy = 7A3AE2BA250233E100FBFEA7 /* PBXContainerItemProxy */;
 		};
 		7A3AE2C6250233E100FBFEA7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 7A3AE2B0250233E100FBFEA7 /* Feedac Learn (macOS) */;
 			targetProxy = 7A3AE2C5250233E100FBFEA7 /* PBXContainerItemProxy */;
+		};
+		7A4322B52507B20D00B5A9CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A4322A52507B20B00B5A9CD /* Feedac Learn WidgetExtension */;
+			targetProxy = 7A4322B42507B20D00B5A9CD /* PBXContainerItemProxy */;
+		};
+		7A84B4802505E7CB005602EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A84B46C2505E7C8005602EB /* Feedac Learn App Clips */;
+			targetProxy = 7A84B47F2505E7CB005602EB /* PBXContainerItemProxy */;
+		};
+		7A84B48B2505E7CB005602EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A84B46C2505E7C8005602EB /* Feedac Learn App Clips */;
+			targetProxy = 7A84B48A2505E7CB005602EB /* PBXContainerItemProxy */;
+		};
+		7A84B4912505E7CB005602EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7A84B46C2505E7C8005602EB /* Feedac Learn App Clips */;
+			targetProxy = 7A84B4902505E7CB005602EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -651,23 +1199,25 @@
 		7A3AE2D4250233E100FBFEA7 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Feedac Learn.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-Learn";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp";
 				PRODUCT_NAME = "Feedac Learn";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -676,23 +1226,25 @@
 		7A3AE2D5250233E100FBFEA7 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Feedac Learn.entitlements";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOS/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-Learn";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp";
 				PRODUCT_NAME = "Feedac Learn";
 				SDKROOT = iphoneos;
 				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -707,6 +1259,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -716,7 +1269,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-Learn";
+				OTHER_SWIFT_FLAGS = "-DmacOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp";
 				PRODUCT_NAME = "Feedac Learn";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -731,6 +1285,7 @@
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 5;
 				DEVELOPMENT_TEAM = 2S2RSVRNML;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -740,7 +1295,8 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-Learn";
+				OTHER_SWIFT_FLAGS = "-DmacOS";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp";
 				PRODUCT_NAME = "Feedac Learn";
 				SDKROOT = macosx;
 				SWIFT_VERSION = 5.0;
@@ -836,6 +1392,200 @@
 			};
 			name = Release;
 		};
+		7A4322B92507B20D00B5A9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Feedac Learn WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A4322BA2507B20D00B5A9CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "Feedac Learn WidgetExtension.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn Widget/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-Widget";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A84B4942505E7CB005602EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Feedac Learn App Clips/Feedac_Learn_App_Clips.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Feedac Learn App Clips/Preview Content\"";
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Feedac Learn App Clips/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7A84B4952505E7CB005602EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Feedac Learn App Clips/Feedac_Learn_App_Clips.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 5;
+				DEVELOPMENT_ASSET_PATHS = "\"Feedac Learn App Clips/Preview Content\"";
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Feedac Learn App Clips/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Clip";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A84B4982505E7CB005602EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn App ClipsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-App-ClipsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feedac Learn App Clips.app/Feedac Learn App Clips";
+			};
+			name = Debug;
+		};
+		7A84B4992505E7CB005602EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn App ClipsTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-App-ClipsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Feedac Learn App Clips.app/Feedac Learn App Clips";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7A84B49B2505E7CB005602EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn App ClipsUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-App-ClipsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Feedac Learn App Clips";
+			};
+			name = Debug;
+		};
+		7A84B49C2505E7CB005602EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 2S2RSVRNML;
+				INFOPLIST_FILE = "Feedac Learn App ClipsUITests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.feedac.app.Feedac-LearnApp.Feedac-Learn-App-ClipsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Feedac Learn App Clips";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -848,7 +1598,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		7A3AE2D3250233E100FBFEA7 /* Build configuration list for PBXNativeTarget "Feedac Learn (iOS)" */ = {
+		7A3AE2D3250233E100FBFEA7 /* Build configuration list for PBXNativeTarget "Feedac Learn App (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7A3AE2D4250233E100FBFEA7 /* Debug */,
@@ -884,9 +1634,61 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		7A4322BB2507B20D00B5A9CD /* Build configuration list for PBXNativeTarget "Feedac Learn WidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A4322B92507B20D00B5A9CD /* Debug */,
+				7A4322BA2507B20D00B5A9CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A84B4932505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App Clips" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A84B4942505E7CB005602EB /* Debug */,
+				7A84B4952505E7CB005602EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A84B4972505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App ClipsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A84B4982505E7CB005602EB /* Debug */,
+				7A84B4992505E7CB005602EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7A84B49A2505E7CB005602EB /* Build configuration list for PBXNativeTarget "Feedac Learn App ClipsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A84B49B2505E7CB005602EB /* Debug */,
+				7A84B49C2505E7CB005602EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/SDWebImageSwiftUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.0;
+			};
+		};
+		7A8D1F2C250C09D20026B2C3 /* XCRemoteSwiftPackageReference "RoundCode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mariusjcb/RoundCode.git";
+			requirement = {
+				branch = develop;
+				kind = branch;
+			};
+		};
 		7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/mariusjcb/Feedac-UIRedux.git";
@@ -895,9 +1697,42 @@
 				kind = branch;
 			};
 		};
+		7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/httpswift/swifter.git";
+			requirement = {
+				branch = "xcode12-swift5";
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A349AB02504BC15002ACA61 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		7A349AB22504BC1C002ACA61 /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		7A4322D42507B53B00B5A9CD /* Feedac-UIRedux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */;
+			productName = "Feedac-UIRedux";
+		};
+		7A4322D62507B54500B5A9CD /* Feedac-UIRedux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */;
+			productName = "Feedac-UIRedux";
+		};
+		7A8D1F2D250C09D20026B2C3 /* RoundCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A8D1F2C250C09D20026B2C3 /* XCRemoteSwiftPackageReference "RoundCode" */;
+			productName = RoundCode;
+		};
 		7A931DF4250390B300F5BB16 /* Feedac-UIRedux */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */;
@@ -907,6 +1742,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A931DF3250390B300F5BB16 /* XCRemoteSwiftPackageReference "Feedac-UIRedux" */;
 			productName = "Feedac-UIRedux";
+		};
+		7ABC2022250D847D00039D38 /* Swifter */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7ABC2021250D847D00039D38 /* XCRemoteSwiftPackageReference "swifter" */;
+			productName = Swifter;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

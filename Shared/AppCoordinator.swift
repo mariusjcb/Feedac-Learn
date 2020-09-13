@@ -11,7 +11,7 @@ import Feedac_UIRedux
 
 @main
 struct AppCoordinator: App {
-    internal static let store = Store<AppState>(AppState(),
+    internal static let store = Store<AppState>(AppState(title: "PRODUCTION"),
                                                 using: AppStateReducer,
                                                 intercept: [AppLogger])
     
@@ -26,10 +26,10 @@ struct AppCoordinator: App {
                             })
     }
     
-    #if targetEnvironment(macCatalyst)
+    #if macOS
     var body: some Scene {
         WindowGroup {
-            StoreProvider(store: Self.store) {
+            ReduxStoreUIContainer(Self.store) {
                 SplitView()
             }
         }
@@ -37,16 +37,26 @@ struct AppCoordinator: App {
     #else
     var body: some Scene {
         WindowGroup {
-            ReduxStoreUIContainer(Self.store) {
-                TabBarView()
-            }
+            ReduxStoreUIContainer(Self.sampleStore) {
+                TabBarView().edgesIgnoringSafeArea(.all)
+            }.edgesIgnoringSafeArea(.all)
         }
     }
     #endif
 }
 
-#if DEBUG
+//#if DEBUG
 extension AppCoordinator {
-    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState), using: AppStateReducer)
+    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState),
+                                             using: AppStateReducer,
+                                             intercept: [AppLogger])
 }
-#endif
+//#endif
+
+struct AppCoordinator_Previews: PreviewProvider {
+    static var previews: some View {
+        ReduxStoreUIContainer(AppCoordinator.sampleStore) {
+            TabBarView().environmentObject(AppCoordinator.sampleStore)
+        }
+    }
+}

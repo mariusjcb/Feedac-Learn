@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "ReduxUILinker.body.getter:ReduxUILinker.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "store.state">
+            </PersistentString>
+            <PersistentString
+               value = "store.state.title">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #2 in LessonViewList.body(_:):LessonsViewList.swift">
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

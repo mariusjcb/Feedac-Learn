@@ -18,6 +18,42 @@
           "revision": "15d7447781afdf2425b4b7b6849666a2be56a46f",
           "version": null
         }
+      },
+      {
+        "package": "RoundCode",
+        "repositoryURL": "https://github.com/mariusjcb/RoundCode.git",
+        "state": {
+          "branch": "develop",
+          "revision": "c7e6725549feef122c946642cd1dce369cb5ded2",
+          "version": null
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "7a21432a370a34925046244462281bd36ebab73d",
+          "version": "5.9.1"
+        }
+      },
+      {
+        "package": "SDWebImageSwiftUI",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImageSwiftUI.git",
+        "state": {
+          "branch": null,
+          "revision": "4c7f169e39bc35d6b80d42b8eb8301bee9cd0907",
+          "version": "1.5.0"
+        }
+      },
+      {
+        "package": "Swifter",
+        "repositoryURL": "https://github.com/httpswift/swifter.git",
+        "state": {
+          "branch": "xcode12-swift5",
+          "revision": "14334e0318a919fec72d3adc85aff66b80c31a73",
+          "version": null
+        }
       }
     ]
   },

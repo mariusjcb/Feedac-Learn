@@ -1,0 +1,19 @@
+{
+    "appclips": {
+        "apps": [ "com.feedac.app.Feedac-LearnApp.Clip" ]
+    },
+    "applinks": {
+        "details": [
+            "appId": "2S2RSVRNML.com.feedac.app.Feedac-LearnApp",
+            "components": [
+                { "/": "/learn/*" }
+            ]
+        ]
+    },
+    "activitycontinuation": {
+        "apps": [ "2S2RSVRNML.com.feedac.app.Feedac-LearnApp" ]
+    },
+    "webcredentials": {
+        "apps": [ "2S2RSVRNML.com.feedac.app.Feedac-LearnApp" ]
+    }
+}
