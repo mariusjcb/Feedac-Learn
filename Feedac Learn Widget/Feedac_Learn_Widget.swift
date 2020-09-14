@@ -127,7 +127,8 @@ struct Feedac_Learn_Widget: Widget {
 
 //#if DEBUG
 extension Feedac_Learn_Widget {
-    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState),
+    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState,
+                                                      userState: .sampleState),
                                              using: AppStateReducer,
                                              intercept: [AppLogger])
 }

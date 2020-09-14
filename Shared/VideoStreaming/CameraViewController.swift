@@ -804,14 +804,6 @@ class PlayerViewController: UIViewController {
         self.addPlayer()
     }
     
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        .landscapeLeft
-    }
-    
-    override var preferredInterfaceOrientationForPresentation: UIInterfaceOrientation {
-        .landscapeLeft
-    }
-    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         playerViewController?.view.frame = view.bounds
@@ -821,7 +813,7 @@ class PlayerViewController: UIViewController {
         let player = AVPlayer(url: url)
         let playerViewController = AVPlayerViewController()
         playerViewController.player = player
-        playerViewController.videoGravity = .resizeAspectFill
+        playerViewController.videoGravity = .resize
         player.rate = 1
         playerViewController.view.frame = view.bounds
         
@@ -896,6 +888,7 @@ class CameraViewController: UIViewController,
             let deviceOrientation = UIDevice.current.orientation
             guard let newVideoOrientation = AVCaptureVideoOrientation(deviceOrientation: deviceOrientation),
                   deviceOrientation.isPortrait || deviceOrientation.isLandscape else {
+                videoPreviewLayerConnection.videoOrientation = .portrait
                 return
             }
             videoPreviewLayerConnection.videoOrientation = newVideoOrientation
@@ -954,7 +947,14 @@ class CameraViewController: UIViewController,
                 AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) ??
                 AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .front)!
             let videoDeviceInput = try AVCaptureDeviceInput(device: device)
-            
+            if session.canAddInput(videoDeviceInput) {
+                session.addInput(videoDeviceInput)
+                self.videoDeviceInput = videoDeviceInput
+            } else {
+                cameraAccess = .configurationFailed
+                session.commitConfiguration()
+                return
+            }
             if session.canAddInput(videoDeviceInput) {
                 session.addInput(videoDeviceInput)
                 self.videoDeviceInput = videoDeviceInput
@@ -986,7 +986,7 @@ class CameraViewController: UIViewController,
                 movieConnection = connection
                 let deviceOrientation = UIDevice.current.orientation
                 let orientation = AVCaptureVideoOrientation(deviceOrientation: deviceOrientation)
-                connection.videoOrientation = orientation ?? .landscapeRight
+                connection.videoOrientation = orientation ?? .portrait
                 if connection.isVideoStabilizationSupported {
                     connection.preferredVideoStabilizationMode = .auto
                 }
@@ -1350,7 +1350,7 @@ struct M3U {
     var mediaList: [M3UMediaInfo] = []
     var partialList: [Int: [M3UMediaInfo]] = [:]
     var partialDuration: Double {
-        min(partialList.values.map { $0.map { $0.duration }.max() }.compactMap { $0?.seconds }.max() ?? 0,
+        min(partialList.values.map { $0.map { $0.duration }.max() }.compactMap { $0?.seconds }.max() ?? .infinity,
             FMP4WriterConfiguration().partialSegment)
     }
     var targetDuration: Double {
@@ -1364,10 +1364,11 @@ extension M3U: CustomStringConvertible {
             "#EXTM3U",
             "#EXT-X-VERSION: \(version)",
             "#EXT-X-MEDIA-SEQUENCE: 0",
-            "#EXT-X-TARGETDURATION: \(Int(targetDuration))",
+            "#EXT-X-TARGETDURATION: \(Int(targetDuration))"
         ]
         if let firstElement = self.firstElement {
             lines.append("#EXT-X-MAP:URI=\"\(firstElement)\"")
+            lines.append("#EXT-X-PART-INF:PART-TARGET= \(Int(targetDuration))")
         }
         return lines
     }
@@ -1386,7 +1387,7 @@ extension M3U: CustomStringConvertible {
     var descriptionLLHLS: String {
         var lines: [String] = [
             "#EXT-X-SERVER-CONTROL:PART-HOLD-BACK=\(Int(targetDuration) * 3)",
-            "#EXT-X-PART-INF:PART-TARGET= \(Int(partialDuration))",
+            "#EXT-X-PART-INF:PART-TARGET= \(Int(partialDuration))"
         ]
         for partialKey in partialList.keys.sorted() {
             for partial in partialList[partialKey]! {

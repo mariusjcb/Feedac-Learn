@@ -11,5 +11,7 @@ import Feedac_CoreRedux
 let AppStateReducer: Reducer<AppState> = { state, action  in
     var state = state
     state.lessonsState = LessonsReducer(state.lessonsState, action)
+    state.userState = UserReducer(state.userState, action)
+    state.tabBarState = TabBarReducer(state.tabBarState, action)
     return state
 }

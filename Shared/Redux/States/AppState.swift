@@ -9,20 +9,24 @@ import Foundation
 import Feedac_CoreRedux
 
 public struct AppState: State, Codable {
+    var userState: UserState
     var lessonsState: LessonsState
+    var tabBarState: TabBarState = TabBarState()
     var title: String = "NONE"
     
     init(title: String) {
         if let state = Self.archivedState {
+            userState = state.1.userState
             lessonsState = state.1.lessonsState
         } else {
             lessonsState = LessonsState(criteria: "")
+            userState = UserState()
         }
         self.title = title
     }
     
     enum CodingKeys: String, CodingKey {
-        case lessonsState
+        case lessonsState, userState, tabBarState
     }
 }
 
@@ -82,8 +86,9 @@ extension AppState {
 
 //#if DEBUG
 extension AppState {
-    init(lessonsState: LessonsState) {
+    init(lessonsState: LessonsState, userState: UserState) {
         self.lessonsState = lessonsState
+        self.userState = userState
         self.title = "SAMPLE"
     }
 }

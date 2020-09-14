@@ -11,10 +11,7 @@ import Feedac_CoreRedux
 let AppLogger: Middleware<AppState> = { dispatch, state in
     return { next in
         return { action in
-//            #if DEBUG
             print("Action Dispatched: \(String(reflecting: type(of: action))) : \(String(describing: action))")
-//            #endif
-            
             return next(action)
         }
     }

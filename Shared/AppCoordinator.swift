@@ -47,7 +47,8 @@ struct AppCoordinator: App {
 
 //#if DEBUG
 extension AppCoordinator {
-    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState),
+    static var sampleStore = Store<AppState>(AppState(lessonsState: .sampleState,
+                                                      userState: .sampleState),
                                              using: AppStateReducer,
                                              intercept: [AppLogger])
 }

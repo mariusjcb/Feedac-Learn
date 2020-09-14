@@ -7,14 +7,18 @@
 
 import SwiftUI
 import Feedac_CoreRedux
+import Feedac_UIRedux
 
-struct TabBarView: View {
+struct TabBarView: ReduxView {
     @EnvironmentObject private var store: Store<AppState>
-    @SwiftUI.State var selectedTab = Tab.discover
+    
+    struct DataModel {
+        let selectedTab: Tab
+    }
     
     enum Tab: Int, CaseIterable {
-        case discover
-        case account
+        case discover = 0
+        case account = 1
         
         var title: String {
             switch self {
@@ -38,14 +42,22 @@ struct TabBarView: View {
         }
     }
     
-    var body: some View {
-        TabView(selection: $selectedTab) {
+    func map(_ state: AppState, dispatch: @escaping Dispatcher) -> DataModel {
+        return DataModel(selectedTab: Tab(rawValue: state.tabBarState.selectedTab)!)
+    }
+    
+    func body(_ dataModel: DataModel) -> some View {
+        TabView(selection: Binding<Int>(get: { () -> Int in
+            return dataModel.selectedTab.rawValue
+        }, set: { tag in
+            store.dispatch(action: TabBarAction.SelectTab(tag: tag))
+        })) {
             HomeView().tabItem {
                 self.tabBarItem(text: Tab.discover.title, image: Tab.discover.image)
-            }.tag(Tab.discover.title).edgesIgnoringSafeArea(.all)
-            Text("").tabItem {
+            }.tag(Tab.discover.rawValue).edgesIgnoringSafeArea(.all)
+            AccountView().tabItem {
                 self.tabBarItem(text: Tab.account.title, image: Tab.account.image)
-            }.tag(Tab.account.title)
+            }.tag(Tab.account.rawValue)
         }
     }
 }

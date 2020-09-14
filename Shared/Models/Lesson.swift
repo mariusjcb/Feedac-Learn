@@ -22,6 +22,9 @@ public struct Lesson: Codable, Identifiable, Hashable {
     public let details: String
     public let rating: Int
     public let livePlaylistUrl: URL?
+    public let countryCode: String
+    public let currencyCode: String
+    public let totalSales: Int
     
     var stringPriceSymbol: String { "RON" }
     var stringPriceValue: String { .init(format: "%.2f", price ?? 0) }
@@ -47,6 +50,9 @@ public struct Lesson: Codable, Identifiable, Hashable {
         case details
         case rating
         case livePlaylistUrl
+        case countryCode
+        case currencyCode
+        case totalSales
     }
 }
 
@@ -75,7 +81,10 @@ extension Lesson {
                           teacherDetails: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                           details: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\nIt has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
                           rating: [5, 4, 3, 2, 1][iterator % 5],
-                          livePlaylistUrl: URL(string: "http://192.168.0.187/playlist-llhls.m3u8"))
+                          livePlaylistUrl: URL(string: "http://192.168.0.109/playlist.m3u8"),
+                          countryCode: "US",
+                          currencyCode: "USD",
+                          totalSales: Int.random(in: 10...1000))
         }
         return elements
     }
