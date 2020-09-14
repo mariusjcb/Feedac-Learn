@@ -73,7 +73,7 @@
       <EnvironmentVariables>
          <EnvironmentVariable
             key = "_XCAppClipURL"
-            value = "https://iliemarius.ro/learn?lessonId=1234"
+            value = "https://iliemarius.ro/learn?lessonId=B10E8573-FA58-497F-95BE-366C2456BE16"
             isEnabled = "YES">
          </EnvironmentVariable>
       </EnvironmentVariables>

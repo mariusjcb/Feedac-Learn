@@ -12,12 +12,3 @@ struct ScannerView: View {
         Text("Can't scan QRCodes on this platform")
     }
 }
-
-struct LivestreamView: View {
-    @Binding var sheetType: SheetType
-    @State var isRecording = false
-    
-    var body: some View {
-        Text("In progress...")
-    }
-}

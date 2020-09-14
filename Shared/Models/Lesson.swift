@@ -27,12 +27,12 @@ public struct Lesson: Codable, Identifiable, Hashable {
     public let totalSales: Int
     
     var stringPriceSymbol: String { "RON" }
-    var stringPriceValue: String { .init(format: "%.2f", price ?? 0) }
+    var stringPriceValue: String { .init(format: "%.2f", price) }
     var stringPrice: String { stringPriceSymbol + " " + stringPriceValue }
     
     public func hash(into hasher: inout Hasher) {
         hasher.combine(id)
-        hasher.finalize()
+        _ = hasher.finalize()
     }
     
     enum CodingKeys: String, CodingKey {
@@ -73,8 +73,8 @@ extension Lesson {
                             "https://www.apple.com/leadership/images/bio/tim-cook_image.png.large.png",
                             "https://feedac.com/img.png"
                           ][iterator % 4]),
-                          joined: [true, false].randomElement()!,
-                          isOwnLesson: [true, false].randomElement()!,
+                          joined: [false, true][iterator % 2],
+                          isOwnLesson: [false, false, true, true][iterator % 4],
                           price: randomDouble,
                           maxAtendees: randomInt,
                           productId: nil,

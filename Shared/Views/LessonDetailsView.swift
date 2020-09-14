@@ -82,7 +82,14 @@ public struct LessonDetailsView: ReduxView {
                 ForEach(dataModel.otherLessons, id: \.self) { obj in
                     NavigationLink(destination: LessonDetailsView(authorSource: obj.teacherId,
                                                                   lessonId: obj.id)) {
-                        LessonView(showAuthor: false, authorSource: obj.teacherId, lessonId: obj.id)
+                        LessonView(showAuthor: false,
+                                   authorSource: obj.teacherId,
+                                   lessonId: obj.id)
+                            .onAppear(perform: {
+                                store.dispatch(action: LessonsAction
+                                                .FetchLesson(changeIsWaiting: false,
+                                                             lessonId: obj.id))
+                            })
                     }.drawingGroup()
                 }.padding(.top, 25)
                 .padding(.horizontal)

@@ -32,6 +32,23 @@ struct LessonsAction {
         }
     }
     
+    struct FetchLesson: AsyncAction {
+        var changeIsWaiting: Bool = true
+        let lessonId: String
+        
+        func async(on state: State?, dispatch: @escaping Dispatcher) {
+            if changeIsWaiting {
+                dispatch(SetIsWaiting(isWaiting: true))
+            }
+            DispatchQueue.global().asyncAfter(deadline: .now() + 3.0) {
+                dispatch(
+                    SetLesson(isWaiting: false,
+                              lesson: Lesson.mock(1, id: lessonId).first!)
+                )
+            }
+        }
+    }
+    
     struct FetchAuthorLessonsList: AsyncAction {
         let authorId: String
         
@@ -72,6 +89,16 @@ struct LessonsAction {
                 )
             }
         }
+    }
+    
+    struct SetIsWaiting: Action {
+        let isWaiting: Bool
+    }
+    
+    struct SetLesson: Action {
+        let isWaiting: Bool
+        let lesson: Lesson
+        
     }
     
     struct SetList: Action {

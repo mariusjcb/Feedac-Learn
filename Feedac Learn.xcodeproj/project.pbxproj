@@ -22,6 +22,27 @@
 		7A3AE2CE250233E100FBFEA7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A3250233DF00FBFEA7 /* ContentView.swift */; };
 		7A3AE2CF250233E100FBFEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */; };
 		7A3AE2D0250233E100FBFEA7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A3AE2A4250233E100FBFEA7 /* Assets.xcassets */; };
+		7A3D5EEA250F8FD100C8041F /* WhiteboardDraw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EE9250F8FD100C8041F /* WhiteboardDraw.swift */; };
+		7A3D5EEB250FDFD600C8041F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C75250A4985000100EE /* CodeView.swift */; };
+		7A3D5EEC250FDFD900C8041F /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5206250BADD7007E0E63 /* ScannerView.swift */; };
+		7A3D5EEE250FDFFC00C8041F /* SDWebImageSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3D5EED250FDFFC00C8041F /* SDWebImageSwiftUI */; };
+		7A3D5EF0250FDFFE00C8041F /* RoundCode in Frameworks */ = {isa = PBXBuildFile; productRef = 7A3D5EEF250FDFFE00C8041F /* RoundCode */; };
+		7A3D5EF2250FE03700C8041F /* LivestreamControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF1250FE03700C8041F /* LivestreamControllers.swift */; };
+		7A3D5EF5250FE06800C8041F /* LivestreamControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF3250FE05600C8041F /* LivestreamControllers.swift */; };
+		7A3D5EF6250FE06D00C8041F /* LivestreamControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF3250FE05600C8041F /* LivestreamControllers.swift */; };
+		7A3D5EF7250FE07400C8041F /* LivestreamControllers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF3250FE05600C8041F /* LivestreamControllers.swift */; };
+		7A3D5EFA250FF16F00C8041F /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */; };
+		7A3D5EFE250FF1BE00C8041F /* FeedacApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */; };
+		7A3D5EFF250FF1BE00C8041F /* FeedacApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */; };
+		7A3D5F00250FF1BE00C8041F /* FeedacApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */; };
+		7A3D5F01250FF1BE00C8041F /* FeedacApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */; };
+		7A3D5F02250FF1C000C8041F /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */; };
+		7A3D5F03250FF1C000C8041F /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */; };
+		7A3D5F04250FF1C100C8041F /* ApiWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */; };
+		7A3D5F06250FF3EB00C8041F /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5F05250FF3EB00C8041F /* Discover.swift */; };
+		7A3D5F07250FF3EB00C8041F /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5F05250FF3EB00C8041F /* Discover.swift */; };
+		7A3D5F08250FF3EB00C8041F /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5F05250FF3EB00C8041F /* Discover.swift */; };
+		7A3D5F09250FF3EB00C8041F /* Discover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A3D5F05250FF3EB00C8041F /* Discover.swift */; };
 		7A4322A82507B20B00B5A9CD /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4322A72507B20B00B5A9CD /* WidgetKit.framework */; };
 		7A4322AA2507B20B00B5A9CD /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A4322A92507B20B00B5A9CD /* SwiftUI.framework */; };
 		7A4322AD2507B20B00B5A9CD /* Feedac_Learn_Widget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A4322AC2507B20B00B5A9CD /* Feedac_Learn_Widget.swift */; };
@@ -84,7 +105,6 @@
 		7A84B4672505D4EF005602EB /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
 		7A84B4682505D4EF005602EB /* ApplePayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4662505D4EF005602EB /* ApplePayView.swift */; };
 		7A84B4702505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */; };
-		7A84B4722505E7C8005602EB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4712505E7C8005602EB /* ContentView.swift */; };
 		7A84B4772505E7CB005602EB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A84B4762505E7CB005602EB /* Preview Assets.xcassets */; };
 		7A84B4832505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B4822505E7CB005602EB /* Feedac_Learn_App_ClipsTests.swift */; };
 		7A84B48E2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A84B48D2505E7CB005602EB /* Feedac_Learn_App_ClipsUITests.swift */; };
@@ -114,7 +134,6 @@
 		7A931E292503CF6900F5BB16 /* LessonsAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A931E282503CF6900F5BB16 /* LessonsAction.swift */; };
 		7AC08C76250A4985000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C75250A4985000100EE /* CodeView.swift */; };
 		7AC08C82250A4C21000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
-		7AC08C83250A4C96000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
 		7AC08C84250A4C97000100EE /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC08C7D250A4C00000100EE /* CodeView.swift */; };
 		7AD381FF250E374C003282DC /* Swifter in Frameworks */ = {isa = PBXBuildFile; productRef = 7AD381FE250E374C003282DC /* Swifter */; };
 		7AD38201250E8CD3003282DC /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD38200250E8CD3003282DC /* AccountView.swift */; };
@@ -153,7 +172,6 @@
 		7AD9F93F250C8E3400BCFCDF /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AD9F93C250C8E1400BCFCDF /* CameraViewController.swift */; };
 		7ADE5207250BADD7007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5206250BADD7007E0E63 /* ScannerView.swift */; };
 		7ADE520A250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
-		7ADE520B250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
 		7ADE520C250BAEB0007E0E63 /* ScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADE5208250BAE7C007E0E63 /* ScannerView.swift */; };
 		7AF339EE2503F7D7007B4B29 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
 		7AF339EF2503F7D7007B4B29 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF339ED2503F7D7007B4B29 /* RatingView.swift */; };
@@ -251,6 +269,12 @@
 		7A3AE2C8250233E100FBFEA7 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		7A3AE2CA250233E100FBFEA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A3AE2DF2502341D00FBFEA7 /* Feedac Learn.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Feedac Learn.entitlements"; sourceTree = "<group>"; };
+		7A3D5EE9250F8FD100C8041F /* WhiteboardDraw.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhiteboardDraw.swift; sourceTree = "<group>"; };
+		7A3D5EF1250FE03700C8041F /* LivestreamControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamControllers.swift; sourceTree = "<group>"; };
+		7A3D5EF3250FE05600C8041F /* LivestreamControllers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivestreamControllers.swift; sourceTree = "<group>"; };
+		7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiWorker.swift; sourceTree = "<group>"; };
+		7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedacApi.swift; sourceTree = "<group>"; };
+		7A3D5F05250FF3EB00C8041F /* Discover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Discover.swift; sourceTree = "<group>"; };
 		7A4322A62507B20B00B5A9CD /* Feedac Learn WidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Feedac Learn WidgetExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A4322A72507B20B00B5A9CD /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		7A4322A92507B20B00B5A9CD /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -267,7 +291,6 @@
 		7A84B4662505D4EF005602EB /* ApplePayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplePayView.swift; sourceTree = "<group>"; };
 		7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Feedac Learn App Clips.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feedac_Learn_App_ClipsApp.swift; sourceTree = "<group>"; };
-		7A84B4712505E7C8005602EB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7A84B4732505E7CB005602EB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A84B4762505E7CB005602EB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A84B4782505E7CB005602EB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -358,6 +381,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A3D5EEE250FDFFC00C8041F /* SDWebImageSwiftUI in Frameworks */,
+				7A3D5EF0250FDFFE00C8041F /* RoundCode in Frameworks */,
 				7A4322D72507B54500B5A9CD /* Feedac-UIRedux in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +441,8 @@
 		7A3AE2A1250233DF00FBFEA7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				7A3D5EF8250FF14200C8041F /* Networking */,
+				7A3D5EE8250F8FBB00C8041F /* Whiteboard */,
 				7AD9F93B250C8DE700BCFCDF /* VideoStreaming */,
 				7A931E272503CEC400F5BB16 /* Redux */,
 				7A931E1D2503C35200F5BB16 /* Models */,
@@ -448,6 +475,7 @@
 			isa = PBXGroup;
 			children = (
 				7A3AE2AC250233E100FBFEA7 /* Info.plist */,
+				7A3D5EF1250FE03700C8041F /* LivestreamControllers.swift */,
 				7AC08C75250A4985000100EE /* CodeView.swift */,
 				7ADE5206250BADD7007E0E63 /* ScannerView.swift */,
 			);
@@ -461,6 +489,7 @@
 				7A3AE2B4250233E100FBFEA7 /* macOS.entitlements */,
 				7AC08C7D250A4C00000100EE /* CodeView.swift */,
 				7ADE5208250BAE7C007E0E63 /* ScannerView.swift */,
+				7A3D5EF3250FE05600C8041F /* LivestreamControllers.swift */,
 			);
 			path = macOS;
 			sourceTree = "<group>";
@@ -483,6 +512,40 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
+		7A3D5EE8250F8FBB00C8041F /* Whiteboard */ = {
+			isa = PBXGroup;
+			children = (
+				7A3D5EE9250F8FD100C8041F /* WhiteboardDraw.swift */,
+			);
+			path = Whiteboard;
+			sourceTree = "<group>";
+		};
+		7A3D5EF8250FF14200C8041F /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				7A3D5EFC250FF19B00C8041F /* BaseNatworking */,
+				7A3D5EFB250FF19200C8041F /* Lessons */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		7A3D5EFB250FF19200C8041F /* Lessons */ = {
+			isa = PBXGroup;
+			children = (
+				7A3D5F05250FF3EB00C8041F /* Discover.swift */,
+			);
+			path = Lessons;
+			sourceTree = "<group>";
+		};
+		7A3D5EFC250FF19B00C8041F /* BaseNatworking */ = {
+			isa = PBXGroup;
+			children = (
+				7A3D5EF9250FF16F00C8041F /* ApiWorker.swift */,
+				7A3D5EFD250FF1BE00C8041F /* FeedacApi.swift */,
+			);
+			path = BaseNatworking;
+			sourceTree = "<group>";
+		};
 		7A4322AB2507B20B00B5A9CD /* Feedac Learn Widget */ = {
 			isa = PBXGroup;
 			children = (
@@ -498,7 +561,6 @@
 			isa = PBXGroup;
 			children = (
 				7A84B46F2505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift */,
-				7A84B4712505E7C8005602EB /* ContentView.swift */,
 				7A84B4732505E7CB005602EB /* Assets.xcassets */,
 				7A84B4782505E7CB005602EB /* Info.plist */,
 				7A84B4792505E7CB005602EB /* Feedac_Learn_App_Clips.entitlements */,
@@ -758,6 +820,8 @@
 			name = "Feedac Learn App Clips";
 			packageProductDependencies = (
 				7A4322D62507B54500B5A9CD /* Feedac-UIRedux */,
+				7A3D5EED250FDFFC00C8041F /* SDWebImageSwiftUI */,
+				7A3D5EEF250FDFFE00C8041F /* RoundCode */,
 			);
 			productName = "Feedac Learn App Clips";
 			productReference = 7A84B46D2505E7C8005602EB /* Feedac Learn App Clips.app */;
@@ -946,13 +1010,16 @@
 				7AD38207250E924A003282DC /* UserState.swift in Sources */,
 				7A931E232503C99D00F5BB16 /* LessonsState.swift in Sources */,
 				7A931DFE2503986A00F5BB16 /* AppStateReducer.swift in Sources */,
+				7A3D5EFE250FF1BE00C8041F /* FeedacApi.swift in Sources */,
 				7A931E1F2503C35C00F5BB16 /* DiscoverList.swift in Sources */,
 				7A931E0E2503AE7D00F5BB16 /* HomeView.swift in Sources */,
 				7A931E122503B6FA00F5BB16 /* LessonView.swift in Sources */,
 				7AD3821D250EBFFE003282DC /* TabBarReducer.swift in Sources */,
 				7AD38211250E9825003282DC /* UserAction.swift in Sources */,
 				7AD38201250E8CD3003282DC /* AccountView.swift in Sources */,
+				7A3D5F06250FF3EB00C8041F /* Discover.swift in Sources */,
 				7AD38218250EBFCA003282DC /* TabBarState.swift in Sources */,
+				7A3D5EF2250FE03700C8041F /* LivestreamControllers.swift in Sources */,
 				7A931E292503CF6900F5BB16 /* LessonsAction.swift in Sources */,
 				7AD38204250E8E06003282DC /* User.swift in Sources */,
 				7A349A9E2504005D002ACA61 /* HomeHeaderView.swift in Sources */,
@@ -960,6 +1027,7 @@
 				7ADE5207250BADD7007E0E63 /* ScannerView.swift in Sources */,
 				7A4322B32507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */,
 				7A931E212503C3D100F5BB16 /* Lesson.swift in Sources */,
+				7A3D5EFA250FF16F00C8041F /* ApiWorker.swift in Sources */,
 				7AF339EE2503F7D7007B4B29 /* RatingView.swift in Sources */,
 				7A931E01250398D800F5BB16 /* AppLogger.swift in Sources */,
 				7A84B4522505A7AB005602EB /* ReviewRow.swift in Sources */,
@@ -968,6 +1036,7 @@
 				7A1B81022504F9A0001EC23C /* TextFieldObservable.swift in Sources */,
 				7AD3820E250E971D003282DC /* UserReducer.swift in Sources */,
 				7AC08C76250A4985000100EE /* CodeView.swift in Sources */,
+				7A3D5EEA250F8FD100C8041F /* WhiteboardDraw.swift in Sources */,
 				7A84B4582505AEA0005602EB /* DetailsView.swift in Sources */,
 				7A349AA42504181C002ACA61 /* ReadMoreHomePageBanner.swift in Sources */,
 				7A84B4552505A8B2005602EB /* Review.swift in Sources */,
@@ -987,6 +1056,7 @@
 			files = (
 				7A79D0E52503D49400433C3E /* LessonView.swift in Sources */,
 				7A3AE2CE250233E100FBFEA7 /* ContentView.swift in Sources */,
+				7A3D5F07250FF3EB00C8041F /* Discover.swift in Sources */,
 				7A79D0EB2503D75100433C3E /* LessonsReducer.swift in Sources */,
 				7AF339EF2503F7D7007B4B29 /* RatingView.swift in Sources */,
 				7AD38226250EE2E4003282DC /* AccountView.swift in Sources */,
@@ -996,6 +1066,7 @@
 				7AD38212250E9825003282DC /* UserAction.swift in Sources */,
 				7A931E0825039AAE00F5BB16 /* SplitView.swift in Sources */,
 				7AD38205250E8E06003282DC /* User.swift in Sources */,
+				7A3D5EFF250FF1BE00C8041F /* FeedacApi.swift in Sources */,
 				7AF339F22503FB0B007B4B29 /* LessonsViewList.swift in Sources */,
 				7A84B4562505A8B2005602EB /* Review.swift in Sources */,
 				7ADE520A250BAEB0007E0E63 /* ScannerView.swift in Sources */,
@@ -1006,6 +1077,7 @@
 				7AD38219250EBFCA003282DC /* TabBarState.swift in Sources */,
 				7A84B4532505A7AB005602EB /* ReviewRow.swift in Sources */,
 				7AD3820F250E971D003282DC /* UserReducer.swift in Sources */,
+				7A3D5F02250FF1C000C8041F /* ApiWorker.swift in Sources */,
 				7A79D0DF2503D47C00433C3E /* LessonsAction.swift in Sources */,
 				7A931E0725039AAC00F5BB16 /* TabBarView.swift in Sources */,
 				7A84B4502505A4AB005602EB /* RemoteImageLoader.swift in Sources */,
@@ -1018,6 +1090,7 @@
 				7A931E0925039B1400F5BB16 /* AppStateReducer.swift in Sources */,
 				7AD3821E250EBFFE003282DC /* TabBarReducer.swift in Sources */,
 				7A3AE2CC250233E100FBFEA7 /* AppCoordinator.swift in Sources */,
+				7A3D5EF7250FE07400C8041F /* LivestreamControllers.swift in Sources */,
 				7AD53F23250553BD00552EB6 /* TextFieldObservable.swift in Sources */,
 				7A79D0E22503D48C00433C3E /* Lesson.swift in Sources */,
 			);
@@ -1051,12 +1124,15 @@
 				7AD3820A250E924F003282DC /* UserState.swift in Sources */,
 				7A4322C92507B4A700B5A9CD /* LessonsAction.swift in Sources */,
 				7AD38225250EC3E0003282DC /* TabBarAction.swift in Sources */,
+				7A3D5F09250FF3EB00C8041F /* Discover.swift in Sources */,
 				7AD38216250EBF8B003282DC /* UserAction.swift in Sources */,
 				7A4322C12507B49800B5A9CD /* Lesson.swift in Sources */,
 				7A4322D92507B5F100B5A9CD /* LessonDetailsView.swift in Sources */,
 				7A4322E12507B64300B5A9CD /* ApplePayView.swift in Sources */,
 				7A4322CC2507B4A800B5A9CD /* LessonsState.swift in Sources */,
+				7A3D5F04250FF1C100C8041F /* ApiWorker.swift in Sources */,
 				7A4322D02507B4AF00B5A9CD /* Review.swift in Sources */,
+				7A3D5F01250FF1BE00C8041F /* FeedacApi.swift in Sources */,
 				7A4322CB2507B4A800B5A9CD /* AppState.swift in Sources */,
 				7A4322BC2507B43E00B5A9CD /* RemoteImageLoader.swift in Sources */,
 				7AD38214250EBF84003282DC /* UserReducer.swift in Sources */,
@@ -1069,6 +1145,7 @@
 				7AD3821B250EBFD0003282DC /* TabBarState.swift in Sources */,
 				7A4322B22507B20D00B5A9CD /* Feedac_Learn_Widget.intentdefinition in Sources */,
 				7A4322DD2507B62900B5A9CD /* ReviewRow.swift in Sources */,
+				7A3D5EF6250FE06D00C8041F /* LivestreamControllers.swift in Sources */,
 				7A4322D32507B4E900B5A9CD /* RatingView.swift in Sources */,
 				7AD3820C250E9255003282DC /* User.swift in Sources */,
 			);
@@ -1079,14 +1156,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A4322C42507B4A700B5A9CD /* LessonsReducer.swift in Sources */,
+				7A3D5EF5250FE06800C8041F /* LivestreamControllers.swift in Sources */,
 				7AD3821F250EC000003282DC /* TabBarReducer.swift in Sources */,
+				7A3D5F08250FF3EB00C8041F /* Discover.swift in Sources */,
 				7A4322CF2507B4AE00B5A9CD /* DiscoverList.swift in Sources */,
 				7A4322C72507B4A700B5A9CD /* AppStateReducer.swift in Sources */,
-				7AC08C83250A4C96000100EE /* CodeView.swift in Sources */,
 				7AD38209250E924E003282DC /* UserState.swift in Sources */,
 				7A4322C32507B4A700B5A9CD /* LessonsAction.swift in Sources */,
 				7AD38224250EC3DF003282DC /* TabBarAction.swift in Sources */,
 				7AD38215250EBF8A003282DC /* UserAction.swift in Sources */,
+				7A3D5F00250FF1BE00C8041F /* FeedacApi.swift in Sources */,
+				7A3D5F03250FF1C000C8041F /* ApiWorker.swift in Sources */,
 				7A4322C02507B49800B5A9CD /* Lesson.swift in Sources */,
 				7A4322D82507B5F000B5A9CD /* LessonDetailsView.swift in Sources */,
 				7A4322E02507B64300B5A9CD /* ApplePayView.swift in Sources */,
@@ -1095,8 +1175,6 @@
 				7A4322C52507B4A700B5A9CD /* AppState.swift in Sources */,
 				7A4322BD2507B44300B5A9CD /* RemoteImageLoader.swift in Sources */,
 				7AD38213250EBF84003282DC /* UserReducer.swift in Sources */,
-				7ADE520B250BAEB0007E0E63 /* ScannerView.swift in Sources */,
-				7A84B4722505E7C8005602EB /* ContentView.swift in Sources */,
 				7A4322C22507B4A700B5A9CD /* AppLogger.swift in Sources */,
 				7A4322DF2507B63300B5A9CD /* HomeHeaderView.swift in Sources */,
 				7A4322BE2507B47600B5A9CD /* LessonView.swift in Sources */,
@@ -1104,8 +1182,10 @@
 				7AD3821A250EBFCF003282DC /* TabBarState.swift in Sources */,
 				7A84B4702505E7C8005602EB /* Feedac_Learn_App_ClipsApp.swift in Sources */,
 				7A4322DC2507B62900B5A9CD /* ReviewRow.swift in Sources */,
+				7A3D5EEC250FDFD900C8041F /* ScannerView.swift in Sources */,
 				7A4322D22507B4E800B5A9CD /* RatingView.swift in Sources */,
 				7AD3820B250E9254003282DC /* User.swift in Sources */,
+				7A3D5EEB250FDFD600C8041F /* CodeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1793,6 +1873,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
 			productName = SDWebImageSwiftUI;
+		};
+		7A3D5EED250FDFFC00C8041F /* SDWebImageSwiftUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A349AAF2504BC15002ACA61 /* XCRemoteSwiftPackageReference "SDWebImageSwiftUI" */;
+			productName = SDWebImageSwiftUI;
+		};
+		7A3D5EEF250FDFFE00C8041F /* RoundCode */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7A8D1F2C250C09D20026B2C3 /* XCRemoteSwiftPackageReference "RoundCode" */;
+			productName = RoundCode;
 		};
 		7A4322D42507B53B00B5A9CD /* Feedac-UIRedux */ = {
 			isa = XCSwiftPackageProductDependency;

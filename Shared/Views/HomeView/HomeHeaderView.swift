@@ -153,7 +153,7 @@ public struct HomeHeaderView: ReduxView {
         .sheet(isPresented: $isSheetPresented) {
             ZStack {
                 CodeView(useAsScanner: $codeSheetType, isPresented: $isSheetPresented)
-                LivestreamView(sheetType: $codeSheetType)
+                LivestreamView(isPresented: $isSheetPresented, sheetType: $codeSheetType)
             }
         }
     }

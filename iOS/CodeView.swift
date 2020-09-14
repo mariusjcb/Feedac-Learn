@@ -121,6 +121,6 @@ struct CodeView: View {
             } else {
                 EmptyView()
             }
-        }.edgesIgnoringSafeArea(.all)
+        }
     }
 }

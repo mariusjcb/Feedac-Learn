@@ -17,7 +17,7 @@ let LessonsReducer: Reducer<LessonsState> = { state, action in
         }
         state.isLoading = action.isWaiting
         state.criteria = action.criteria
-        state.recentSearches.append(action.criteria)
+        state.recentSearches.insert(action.criteria, at: 0)
         state.lessons = state.lessons.merged(with: action.list)
     case let action as LessonsAction.SetAuthorList:
         if action.clearData {
@@ -31,6 +31,10 @@ let LessonsReducer: Reducer<LessonsState> = { state, action in
         }
         state.isReviewPageLoading = action.isWaiting
         state.fetchedLessonReviews[action.lessonId] = state.fetchedLessonReviews[action.lessonId]?.merged(with: action.list)
+    case let action as LessonsAction.SetIsWaiting:
+        state.isLoading = true
+    case let action as LessonsAction.SetLesson:
+        state.lessons = state.lessons.merged(with: [action.lesson])
     default: break
     }
     return state
